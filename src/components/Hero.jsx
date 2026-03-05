@@ -19,27 +19,12 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="hero-visual-center reveal">
-          <div className="visual-composition">
-            <img
-              src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e01a?auto=format&fit=crop&q=80&w=1200"
-              alt="Strategic Strategy"
-              className="composition-main"
-            />
-            <div className="composition-accessory-1"></div>
-            <div className="composition-accessory-2"></div>
-            <div className="floating-metric">
-              <span className="metric-icon">📈</span>
-              <span className="metric-text">Real-time Impact</span>
-            </div>
-          </div>
-        </div>
       </div>
 
       <style>{`
         .hero-centered {
           background-color: var(--white);
-          padding: 160px 0 100px;
+          padding: 160px 0 160px;
           text-align: center;
           position: relative;
           overflow: hidden;
@@ -53,7 +38,7 @@ const Hero = () => {
 
         .hero-content {
           max-width: 900px;
-          margin: 0 auto 60px;
+          margin: 0 auto;
           z-index: 10;
         }
 
@@ -171,4 +156,31 @@ const Hero = () => {
           padding: 14px 24px;
           border-radius: 50px;
           display: flex;
-          align-items: 
+          align-items: center;
+          gap: 12px;
+          box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+          z-index: 5;
+          border: 1px solid var(--border);
+        }
+
+        .metric-text {
+          font-weight: 800;
+          font-size: 0.8125rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: var(--text);
+        }
+
+        @media (max-width: 768px) {
+          .hero-centered { padding-top: 120px; }
+          .hero-title { font-size: 2.5rem; }
+          .hero-description { font-size: 1rem; }
+          .composition-main { height: 300px; }
+          .hero-actions { flex-direction: column; }
+        }
+      `}</style>
+    </section>
+  )
+}
+
+export default Hero

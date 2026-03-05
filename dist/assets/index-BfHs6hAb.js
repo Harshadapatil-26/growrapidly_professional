@@ -116,56 +116,69 @@ Error generating stack: `+i.message+`
         @media (max-width: 992px) {
           .nav-links { display: none; }
         }
-      `})]}),Rf=()=>a.jsxs("section",{className:"hero-light premium-grain",children:[a.jsxs("div",{className:"container hero-grid",children:[a.jsxs("div",{className:"hero-content reveal",children:[a.jsx("span",{className:"section-tag",children:"Strategy for Leaders. Growth for Campaigns. Impact for the Nation"}),a.jsxs("h1",{className:"hero-title",children:["Human-centric ",a.jsx("br",{}),"technology for ",a.jsx("br",{}),"your ",a.jsx("span",{className:"highlight",children:"movement"})]}),a.jsx("p",{className:"hero-lead",children:"Empower your leadership with a modern digital framework. We synchronize high-level strategy with precision-engineered tools to build, engage, and mobilize your community."}),a.jsxs("div",{className:"hero-cta",children:[a.jsx("a",{href:"#contact",className:"btn btn-primary",children:"Start a free trial"}),a.jsx("a",{href:"#services",className:"btn-outline",children:"Book a demo"})]})]}),a.jsx("div",{className:"hero-visual reveal",children:a.jsxs("div",{className:"visual-wrapper",children:[a.jsx("img",{src:"https://images.unsplash.com/photo-1541746972996-4e0b0f43e01a?auto=format&fit=crop&q=80&w=1200",alt:"Strategy Room",className:"main-image"}),a.jsx("div",{className:"abstract-shape"}),a.jsxs("div",{className:"floating-stat",children:[a.jsx("span",{className:"stat-num",children:"98%"}),a.jsx("span",{className:"stat-label",children:"Voter Engagement"})]})]})})]}),a.jsx("style",{children:`
-        .hero-light {
+      `})]}),Rf=()=>a.jsxs("section",{className:"hero-centered premium-grain",children:[a.jsx("div",{className:"container hero-container",children:a.jsxs("div",{className:"hero-content reveal",children:[a.jsx("span",{className:"hero-tagline",children:"Strategy for Leaders. Growth for Campaigns. Impact for the Nation"}),a.jsxs("h1",{className:"hero-title",children:["Human-centric technology ",a.jsx("br",{}),"for your ",a.jsx("span",{className:"highlight",children:"movement"})]}),a.jsx("p",{className:"hero-description",children:"Empower your leadership with a modern digital framework. We synchronize high-level strategy with precision-engineered tools to build, engage, and mobilize your community."}),a.jsxs("div",{className:"hero-actions",children:[a.jsx("a",{href:"#contact",className:"btn btn-primary",children:"Start a free trial"}),a.jsx("a",{href:"#services",className:"btn-secondary",children:"Book a demo"})]})]})}),a.jsx("style",{children:`
+        .hero-centered {
           background-color: var(--white);
-          padding: 180px 0 120px;
+          padding: 160px 0 160px;
+          text-align: center;
+          position: relative;
           overflow: hidden;
         }
 
-        .hero-grid {
-          display: grid;
-          grid-template-columns: 1.1fr 0.9fr;
-          gap: 70px;
+        .hero-container {
+          display: flex;
+          flex-direction: column;
           align-items: center;
         }
 
+        .hero-content {
+          max-width: 900px;
+          margin: 0 auto;
+          z-index: 10;
+        }
+
+        .hero-tagline {
+          display: block;
+          color: var(--primary);
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.15em;
+          font-size: 0.8125rem;
+          margin-bottom: 24px;
+        }
+
         .hero-title {
-          font-size: clamp(3.5rem, 8vw, 5.8rem);
-          line-height: 1.05;
-          margin-bottom: 2.5rem;
+          font-size: clamp(2.75rem, 6vw, 4.25rem);
+          line-height: 1.15;
+          margin-bottom: 24px;
           color: var(--text);
-          letter-spacing: -0.05em;
+          letter-spacing: -0.04em;
           font-weight: 800;
         }
 
         .highlight {
           color: var(--primary);
-          background: linear-gradient(120deg, var(--primary) 0%, #86EFAC 100%);
+          background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
 
-        .hero-lead {
-          font-size: 1.35rem;
+        .hero-description {
+          font-size: 1.125rem;
           color: var(--text-muted);
-          margin-bottom: 3.5rem;
-          max-width: 600px;
+          margin: 4px auto 48px;
+          max-width: 700px;
           line-height: 1.6;
         }
 
-        .hero-cta {
+        .hero-actions {
           display: flex;
-          gap: 24px;
+          gap: 20px;
+          justify-content: center;
         }
 
-        .btn-primary {
-          padding: 18px 40px;
-          box-shadow: 0 15px 30px rgba(102, 187, 27, 0.15);
-        }
-
-        .btn-outline {
-          padding: 18px 40px;
+        .btn-secondary {
+          padding: 16px 36px;
           border-radius: var(--radius);
           border: 1px solid var(--border);
           text-decoration: none;
@@ -174,82 +187,91 @@ Error generating stack: `+i.message+`
           transition: var(--transition);
         }
 
-        .btn-outline:hover {
+        .btn-secondary:hover {
           background-color: var(--text);
           color: var(--white);
           border-color: var(--text);
-          transform: translateY(-2px);
         }
 
-        .hero-visual {
-          position: relative;
-        }
-
-        .visual-wrapper {
-          position: relative;
-          padding: 20px;
-        }
-
-        .main-image {
+        /* Centered Visual Composition */
+        .hero-visual-center {
           width: 100%;
-          height: 550px;
+          max-width: 1000px;
+          margin-top: 20px;
+          position: relative;
+        }
+
+        .visual-composition {
+          position: relative;
+          width: 100%;
+          height: auto;
+          display: flex; 
+          justify-content: center;
+        }
+
+        .composition-main {
+          width: 100%;
+          height: 480px;
           object-fit: cover;
           border-radius: 32px;
-          box-shadow: 0 40px 100px rgba(0,0,0,0.1);
+          box-shadow: 0 40px 80px rgba(0,0,0,0.08);
           position: relative;
           z-index: 2;
-          filter: contrast(1.05) brightness(1.02);
         }
 
-        .abstract-shape {
+        .composition-accessory-1 {
           position: absolute;
-          top: -40px;
-          right: -40px;
-          width: 300px;
-          height: 300px;
+          top: -20px;
+          left: -20px;
+          width: 200px;
+          height: 200px;
           background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
-          border-radius: 50%;
-          opacity: 0.15;
+          opacity: 0.08;
           z-index: 1;
-          filter: blur(40px);
+          filter: blur(20px);
         }
 
-        .floating-stat {
+        .composition-accessory-2 {
           position: absolute;
-          bottom: 60px;
-          left: -40px;
-          background: var(--white);
-          padding: 24px 36px;
-          border-radius: 20px;
-          box-shadow: 0 30px 60px rgba(0,0,0,0.12);
-          z-index: 3;
+          bottom: -20px;
+          right: -20px;
+          width: 250px;
+          height: 250px;
+          background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+          opacity: 0.08;
+          z-index: 1;
+          filter: blur(30px);
+        }
+
+        .floating-metric {
+          position: absolute;
+          bottom: 30px;
+          right: 30px;
+          background: white;
+          padding: 14px 24px;
+          border-radius: 50px;
           display: flex;
-          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+          box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+          z-index: 5;
           border: 1px solid var(--border);
-          transform: rotate(-2deg);
         }
 
-        .stat-num {
-          font-size: 2.25rem;
-          font-weight: 900;
-          color: var(--text);
-          line-height: 1;
-        }
-
-        .stat-label {
-          font-size: 0.8125rem;
+        .metric-text {
           font-weight: 800;
+          font-size: 0.8125rem;
           text-transform: uppercase;
-          color: var(--primary);
-          letter-spacing: 0.1em;
-          margin-top: 6px;
+          letter-spacing: 0.05em;
+          color: var(--text);
         }
 
-        @media (max-width: 1024px) {
-          .hero-grid { grid-template-columns: 1fr; text-align: center; }
-          .hero-lead { margin-left: auto; margin-right: auto; }
-          .hero-cta { justify-content: center; }
-          .hero-visual { margin-top: 60px; }
+        @media (max-width: 768px) {
+          .hero-centered { padding-top: 120px; }
+          .hero-title { font-size: 2.5rem; }
+          .hero-description { font-size: 1rem; }
+          .composition-main { height: 300px; }
+          .hero-actions { flex-direction: column; }
         }
       `})]}),Of=()=>a.jsxs("section",{id:"about",className:"about-light",children:[a.jsx("div",{className:"container",children:a.jsxs("div",{className:"about-grid reveal",children:[a.jsxs("div",{className:"about-content",children:[a.jsx("span",{className:"section-tag",children:"About Us"}),a.jsx("h2",{className:"section-title",children:"A modern Political Strategy and Digital Marketing agency"}),a.jsxs("div",{className:"about-body",children:[a.jsx("p",{children:"We specialize in political campaign strategy, public communication, and leadership branding. Our focus is on building strong political narratives, voter engagement strategies, and impactful digital presence for political leaders and campaigns."}),a.jsx("p",{children:"Along with political strategy, we also help businesses across various industries grow through smart digital marketing, branding, and lead generation strategies."}),a.jsx("p",{className:"mission-highlight",children:"Our mission is to combine strategic thinking, digital innovation, and ground-level insights to create real impact."}),a.jsxs("div",{className:"tagline-row",children:[a.jsx("span",{className:"pill",children:"Strategy"}),a.jsx("span",{className:"pill",children:"Communication"}),a.jsx("span",{className:"pill",children:"Growth"})]})]})]}),a.jsx("div",{className:"about-visual",children:a.jsxs("div",{className:"visual-card",children:[a.jsxs("div",{className:"card-header",children:[a.jsx("div",{className:"brand-dot green"}),a.jsx("div",{className:"brand-dot blue"}),a.jsx("div",{className:"brand-dot orange"})]}),a.jsxs("div",{className:"card-content",children:[a.jsx("h3",{children:"Our Core Mission"}),a.jsx("p",{children:"Driving growth through intelligent storytelling and tactical precision."})]})]})})]})}),a.jsx("style",{children:`
         .about-light {
