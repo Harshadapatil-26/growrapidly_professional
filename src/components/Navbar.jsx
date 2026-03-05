@@ -1,23 +1,60 @@
 import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  const scrollToSection = (id) => {
+    if (isHome) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <nav className="navbar-white">
       <div className="container nav-container">
-        <div className="logo">
+        <Link to="/" className="logo">
           <img src="/images/logo.png" alt="Grow Rapidly" className="logo-img" />
           <span className="brand-name">Grow Rapidly</span>
-        </div>
+        </Link>
 
         <ul className="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#strategy">Strategy</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            {isHome ? (
+              <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a>
+            ) : (
+              <Link to="/#about">About</Link>
+            )}
+          </li>
+          <li>
+            {isHome ? (
+              <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>Services</a>
+            ) : (
+              <Link to="/#services">Services</Link>
+            )}
+          </li>
+          <li>
+            {isHome ? (
+              <a href="#strategy" onClick={(e) => { e.preventDefault(); scrollToSection('strategy'); }}>Strategy</a>
+            ) : (
+              <Link to="/#strategy">Strategy</Link>
+            )}
+          </li>
+          <li>
+            {isHome ? (
+              <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a>
+            ) : (
+              <Link to="/#contact">Contact</Link>
+            )}
+          </li>
         </ul>
 
         <div className="nav-cta">
-          <a href="#contact" className="btn-nav">Get Started</a>
+          <Link to="/#contact" className="btn-nav">Get Started</Link>
         </div>
       </div>
       <style>{`
@@ -89,6 +126,7 @@ const Navbar = () => {
           font-weight: 700;
           font-size: 0.875rem;
           transition: var(--transition);
+          display: block;
         }
 
         .btn-nav:hover {

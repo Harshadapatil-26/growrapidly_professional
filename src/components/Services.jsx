@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Services = () => {
   const services = [
@@ -46,6 +47,16 @@ const Services = () => {
     }
   ]
 
+  const serviceSlugs = [
+    "political-campaign-strategy",
+    "political-social-media-management",
+    "leadership-branding",
+    "constituency-strategy-ground-planning",
+    "digital-advertising-campaigns",
+    "content-creation-political-messaging",
+    "business-digital-marketing"
+  ];
+
   return (
     <section id="services" className="services-section">
       <div className="container">
@@ -67,7 +78,13 @@ const Services = () => {
               <div className="card-info">
                 <h3 style={{ color: service.accent }}>{service.title}</h3>
                 <p>{service.description}</p>
-                <a href="#contact" className="card-link" style={{ color: service.accent }}>Explore Service →</a>
+                <Link
+                  to={`/services/${serviceSlugs[index]}`}
+                  className="card-link"
+                  style={{ color: service.accent }}
+                >
+                  Explore Service →
+                </Link>
               </div>
             </div>
           ))}
