@@ -4,16 +4,10 @@ import { Link } from 'react-router-dom'
 const Services = () => {
   const services = [
     {
-      title: "Political Campaign Strategy",
-      description: "We design complete campaign strategies including voter outreach, messaging, and communication planning to help political leaders run effective and impactful campaigns.",
-      icon: "🎯",
-      accent: "var(--primary)"
-    },
-    {
-      title: "Political Social Media Management",
-      description: "Our team manages political social media accounts with engaging content, reels, graphics, and regular updates to maintain a strong connection with voters.",
+      title: "Digital Campaigns & Communication",
+      description: "We design and manage comprehensive digital campaigns, ensuring your message reaches the right audience through social media, search engines, and targeted digital platforms.",
       icon: "📱",
-      accent: "var(--secondary)"
+      accent: "var(--primary)"
     },
     {
       title: "Leadership Branding",
@@ -25,25 +19,25 @@ const Services = () => {
       title: "Constituency Strategy & Ground Planning",
       description: "We create constituency-focused strategies based on local issues, voter behavior, and ground-level insights to improve public engagement.",
       icon: "🗺️",
-      accent: "var(--primary)"
+      accent: "var(--accent)"
     },
     {
       title: "Digital Advertising Campaigns",
       description: "We run targeted digital campaigns to reach the right audience, increase visibility, and strengthen the impact of political and business campaigns.",
       icon: "📣",
-      accent: "var(--secondary)"
+      accent: "var(--primary)"
     },
     {
       title: "Content Creation & Political Messaging",
       description: "Our team creates impactful content including campaign messages, videos, graphics, and speeches that clearly communicate the leader’s vision.",
       icon: "✍️",
-      accent: "var(--primary)"
+      accent: "var(--secondary)"
     },
     {
       title: "Business Digital Marketing",
       description: "Along with political strategy, we provide digital marketing services for businesses including branding, social media marketing, and lead generation.",
       icon: "💼",
-      accent: "var(--primary)"
+      accent: "var(--accent)"
     }
   ]
 

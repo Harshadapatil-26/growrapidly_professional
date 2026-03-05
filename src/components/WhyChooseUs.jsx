@@ -2,9 +2,9 @@ import React from 'react'
 
 const WhyChooseUs = () => {
   const points = [
-    { title: "Strategic Precision", desc: "Data-driven insights to find and win the voters that matter." },
-    { title: "Native Mobilization", desc: "Tools built to turn online energy into offline action." },
-    { title: "Absolute Scale", desc: "Enterprise infrastructure that grows with your campaign's ambition." }
+    { title: "Strategic Precision", desc: "Data-driven insights to find and win the voters that matter.", color: "var(--primary)", bg: "rgba(87, 176, 0, 0.1)" },
+    { title: "Native Mobilization", desc: "Tools built to turn online energy into offline action.", color: "var(--secondary)", bg: "rgba(40, 151, 197, 0.1)" },
+    { title: "Absolute Scale", desc: "Enterprise infrastructure that grows with your campaign's ambition.", color: "var(--accent)", bg: "rgba(247, 126, 30, 0.1)" }
   ]
 
   return (
@@ -18,7 +18,7 @@ const WhyChooseUs = () => {
           <div className="why-points">
             {points.map((p, i) => (
               <div key={i} className="why-point">
-                <div className="check-icon">✓</div>
+                <div className="check-icon" style={{ color: p.color, background: p.bg }}>✓</div>
                 <div>
                   <h3>{p.title}</h3>
                   <p>{p.desc}</p>
@@ -53,8 +53,6 @@ const WhyChooseUs = () => {
         .check-icon {
           width: 32px;
           height: 32px;
-          background: rgba(87, 176, 0, 0.08);
-          color: var(--primary);
           border-radius: 50%;
           display: flex;
           align-items: center;

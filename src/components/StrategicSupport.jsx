@@ -66,7 +66,7 @@ const StrategicSupport = () => {
         .pulse-circle {
           width: 20px;
           height: 20px;
-          background: var(--primary);
+          background: var(--accent);
           border-radius: 50%;
           z-index: 2;
         }
@@ -74,7 +74,7 @@ const StrategicSupport = () => {
           position: absolute;
           width: 100%;
           height: 100%;
-          border: 2px solid var(--primary);
+          border: 2px solid var(--accent);
           border-radius: 50%;
           animation: pulseRing 2s infinite ease-out;
         }
@@ -82,7 +82,7 @@ const StrategicSupport = () => {
           font-weight: 900;
           letter-spacing: 0.2em;
           font-size: 0.75rem;
-          color: var(--primary);
+          color: var(--accent);
         }
         @keyframes pulseRing {
           0% { transform: scale(0.4); opacity: 1; }

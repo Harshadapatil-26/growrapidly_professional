@@ -19,9 +19,9 @@ const About = () => {
                 Our mission is to combine strategic thinking, digital innovation, and ground-level insights to create real impact.
               </p>
               <div className="tagline-row">
-                <span className="pill">Strategy</span>
-                <span className="pill">Communication</span>
-                <span className="pill">Growth</span>
+                <span className="pill blue">Strategy</span>
+                <span className="pill orange">Communication</span>
+                <span className="pill green">Growth</span>
               </div>
             </div>
           </div>
@@ -30,7 +30,7 @@ const About = () => {
               <div className="card-header">
                 <div className="brand-dot green"></div>
                 <div className="brand-dot blue"></div>
-                <div className="brand-dot teal"></div>
+                <div className="brand-dot orange"></div>
               </div>
               <div className="card-content">
                 <h3>Our Core Mission</h3>
@@ -75,12 +75,13 @@ const About = () => {
         .pill {
           padding: 8px 20px;
           background: white;
-          border: 1px solid var(--border);
           border-radius: 50px;
           font-weight: 700;
           font-size: 0.875rem;
-          color: var(--primary);
         }
+        .pill.green { border: 1px solid var(--primary); color: var(--primary); }
+        .pill.blue { border: 1px solid var(--secondary); color: var(--secondary); }
+        .pill.orange { border: 1px solid var(--accent); color: var(--accent); }
         .about-visual {
           position: relative;
         }
@@ -103,7 +104,7 @@ const About = () => {
         }
         .brand-dot.green { background: var(--primary); }
         .brand-dot.blue { background: var(--secondary); }
-        .brand-dot.teal { background: var(--secondary-dark, #1A6A90); }
+        .brand-dot.orange { background: var(--accent); }
         
         .card-content h3 {
           font-size: 1.5rem;

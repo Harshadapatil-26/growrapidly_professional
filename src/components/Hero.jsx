@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="hero-text-content reveal active">
           <h1 className="hero-headline">
             Strategy for Leaders<br />
-            <span className="text-highlight">Growth</span> for <span className="text-highlight">Campaigns</span><br />
+            <span className="text-highlight-green">Growth</span> for <span className="text-highlight-orange">Campaigns</span><br />
             Impact for the Nation
           </h1>
           <p className="hero-subheadline">
@@ -107,9 +107,9 @@ const Hero = () => {
         }
 
         .btn-hero-primary:hover {
-          background-color: var(--secondary);
+          background-color: var(--accent);
           transform: translateY(-3px);
-          box-shadow: 0 15px 30px rgba(40, 151, 197, 0.3);
+          box-shadow: 0 15px 30px rgba(247, 126, 30, 0.3);
         }
 
         .btn-hero-secondary {

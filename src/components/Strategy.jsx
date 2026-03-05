@@ -2,10 +2,10 @@ import React from 'react'
 
 const Strategy = () => {
   const steps = [
-    { num: "01", title: "Research", desc: "Data insights to decode voter behavior and sentiment." },
-    { num: "02", title: "Narrative", desc: "Crafting a powerful vision that resonates with citizens." },
-    { num: "03", title: "Strategy", desc: "Omni-channel planning for digital and ground action." },
-    { num: "04", title: "Execution", desc: "Precision-timed delivery to mobilize and win." }
+    { num: "01", title: "Research", desc: "Data insights to decode voter behavior and sentiment.", color: "var(--primary)" },
+    { num: "02", title: "Narrative", desc: "Crafting a powerful vision that resonates with citizens.", color: "var(--secondary)" },
+    { num: "03", title: "Strategy", desc: "Omni-channel planning for digital and ground action.", color: "var(--accent)" },
+    { num: "04", title: "Execution", desc: "Precision-timed delivery to mobilize and win.", color: "var(--primary)" }
   ]
 
   return (
@@ -14,7 +14,7 @@ const Strategy = () => {
         <div className="strategy-grid">
           {steps.map((step, index) => (
             <div key={index} className="strategy-card reveal">
-              <div className="step-num">{step.num}</div>
+              <div className="step-num" style={{ color: step.color }}>{step.num}</div>
               <h3>{step.title}</h3>
               <p>{step.desc}</p>
             </div>
@@ -38,7 +38,6 @@ const Strategy = () => {
           font-family: var(--font-heading);
           font-size: 1.25rem;
           font-weight: 800;
-          color: var(--primary);
           margin-bottom: 24px;
           display: flex;
           align-items: center;

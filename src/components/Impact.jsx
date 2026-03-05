@@ -2,10 +2,10 @@ import React from 'react'
 
 const Impact = () => {
   const stats = [
-    { label: "Campaign Growth", val: "145%" },
-    { label: "Voters Engaged", val: "25M+" },
-    { label: "Engagement Rate", val: "68%" },
-    { label: "Success Ratio", val: "92%" }
+    { label: "Campaign Growth", val: "145%", color: "var(--primary)" },
+    { label: "Voters Engaged", val: "25M+", color: "var(--secondary)" },
+    { label: "Engagement Rate", val: "68%", color: "var(--accent)" },
+    { label: "Success Ratio", val: "92%", color: "var(--primary)" }
   ]
 
   return (
@@ -14,7 +14,7 @@ const Impact = () => {
         <div className="stats-grid">
           {stats.map((stat, index) => (
             <div key={index} className="stat-node reveal">
-              <span className="stat-value">{stat.val}</span>
+              <span className="stat-value" style={{ color: stat.color }}>{stat.val}</span>
               <span className="stat-label">{stat.label}</span>
             </div>
           ))}
@@ -41,7 +41,6 @@ const Impact = () => {
           font-family: var(--font-heading);
           font-size: 3.5rem;
           font-weight: 800;
-          color: var(--text);
           line-height: 1;
           margin-bottom: 8px;
         }
