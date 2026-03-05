@@ -69,6 +69,7 @@ const About = () => {
         }
         .tagline-row {
           display: flex;
+          flex-wrap: wrap;
           gap: 15px;
           margin-top: 3rem;
         }
@@ -117,6 +118,11 @@ const About = () => {
         @media (max-width: 1024px) {
           .about-grid { grid-template-columns: 1fr; gap: 60px; }
           .section-title { font-size: 2.5rem; }
+        }
+        @media (max-width: 480px) {
+          .section-title { font-size: 2rem; }
+          .tagline-row { flex-direction: column; align-items: flex-start; }
+          .pill { width: 100%; text-align: center; }
         }
       `}</style>
     </section>

@@ -14,31 +14,23 @@ const Footer = () => {
             <div className="social-grid">
               <a href="#" style={{ backgroundColor: 'var(--secondary)', color: 'white' }}>LN</a>
               <a href="#" style={{ backgroundColor: 'var(--primary)', color: 'white' }}>TW</a>
+              <a href="https://wa.me/919270010816" style={{ backgroundColor: '#25D366', color: 'white' }}>WA</a>
               <a href="#" style={{ backgroundColor: 'var(--accent)', color: 'white' }}>YT</a>
             </div>
           </div>
 
           <div className="footer-links-grid">
             <div className="link-col">
-              <h4>Software</h4>
-              <a href="#">Advocacy</a>
-              <a href="#">Database</a>
-              <a href="#">Donations</a>
-              <a href="#">Communications</a>
+              <h4>Services</h4>
+              <a href="#services">Digital Campaigns</a>
+              <a href="#services">Leadership Branding</a>
+              <a href="#services">Ground Planning</a>
+              <a href="#services">Content Creation</a>
             </div>
             <div className="link-col">
               <h4>Company</h4>
-              <a href="#">About Us</a>
-              <a href="#">Case Studies</a>
-              <a href="#">Careers</a>
-              <a href="#">Contact</a>
-            </div>
-            <div className="link-col">
-              <h4>Resources</h4>
-              <a href="#">Academy</a>
-              <a href="#">Support</a>
-              <a href="#">Documentation</a>
-              <a href="#">API</a>
+              <a href="#about">About Us</a>
+              <a href="mailto:growrapidaly@gmail.com">Contact</a>
             </div>
           </div>
         </div>
@@ -103,7 +95,7 @@ const Footer = () => {
         }
         .footer-links-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 40px;
         }
         .link-col h4 {
@@ -145,6 +137,10 @@ const Footer = () => {
         @media (max-width: 900px) {
           .footer-top { grid-template-columns: 1fr; gap: 60px; }
           .footer-links-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+          .footer-links-grid { grid-template-columns: 1fr; gap: 40px; }
+          .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
         }
       `}</style>
     </footer>

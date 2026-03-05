@@ -7,7 +7,7 @@ const CTA = () => {
         <div className="cta-box reveal">
           <h2>Get started in 15 minutes or less</h2>
           <div className="cta-btns">
-            <a href="#" className="btn-cta btn-primary">Start Your Campaign</a>
+            <a href="mailto:growrapidaly@gmail.com" className="btn-cta btn-primary">growrapidaly@gmail.com</a>
             <a href="#" className="btn-cta btn-accent">Book a Demo</a>
           </div>
         </div>
@@ -61,6 +61,11 @@ const CTA = () => {
         @media (max-width: 600px) {
           .cta-box h2 { font-size: 2.5rem; }
           .cta-btns { flex-direction: column; }
+        }
+        @media (max-width: 480px) {
+          .final-cta { padding: 100px 0; }
+          .cta-box h2 { font-size: 2rem; margin-bottom: 32px; }
+          .btn-cta { width: 100%; box-sizing: border-box; }
         }
       `}</style>
     </section>

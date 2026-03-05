@@ -69,7 +69,12 @@ const WhyChooseUs = () => {
           font-size: 0.9375rem;
         }
         @media (max-width: 900px) {
-          .why-grid { grid-template-columns: 1fr; }
+          .why-grid { grid-template-columns: 1fr; gap: 40px; }
+        }
+        @media (max-width: 480px) {
+          .why-header h2 { font-size: 2rem; }
+          .why-point { flex-direction: column; gap: 16px; }
+          .check-icon { margin-bottom: 8px; }
         }
       `}</style>
     </section>

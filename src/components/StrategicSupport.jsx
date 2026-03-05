@@ -13,12 +13,8 @@ const StrategicSupport = () => {
             </p>
             <a href="#contact" className="btn btn-primary">Secure Your Edge</a>
           </div>
-          <div className="support-indicator">
-            <div className="live-pulse">
-              <div className="pulse-circle"></div>
-              <div className="pulse-ring"></div>
-            </div>
-            <span className="live-text">OPERATIONAL</span>
+          <div className="support-image-container">
+            <img src="/images/hero/dashboard.png" alt="24/7 Strategic Support" className="support-image" />
           </div>
         </div>
       </div>
@@ -49,48 +45,31 @@ const StrategicSupport = () => {
           color: var(--text-muted);
           margin-bottom: 2.5rem;
         }
-        .support-indicator {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 20px;
+        .support-image-container {
+          flex: 1;
+          max-width: 450px;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: var(--shadow-md);
         }
-        .live-pulse {
-          position: relative;
-          width: 100px;
-          height: 100px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .pulse-circle {
-          width: 20px;
-          height: 20px;
-          background: var(--accent);
-          border-radius: 50%;
-          z-index: 2;
-        }
-        .pulse-ring {
-          position: absolute;
+        .support-image {
           width: 100%;
-          height: 100%;
-          border: 2px solid var(--accent);
-          border-radius: 50%;
-          animation: pulseRing 2s infinite ease-out;
+          height: auto;
+          display: block;
+          object-fit: cover;
+          transition: transform 0.5s ease;
         }
-        .live-text {
-          font-weight: 900;
-          letter-spacing: 0.2em;
-          font-size: 0.75rem;
-          color: var(--accent);
-        }
-        @keyframes pulseRing {
-          0% { transform: scale(0.4); opacity: 1; }
-          100% { transform: scale(1.2); opacity: 0; }
+        .support-box:hover .support-image {
+          transform: scale(1.05);
         }
         @media (max-width: 992px) {
           .support-box { flex-direction: column; text-align: center; padding: 60px 40px; }
-          .support-indicator { margin-top: 40px; }
+          .support-image-container { margin-top: 40px; }
+        }
+        @media (max-width: 480px) {
+          .support-box { padding: 40px 20px; border-radius: 20px; }
+          .support-info h2 { font-size: 2rem; }
+          .support-info p { font-size: 1rem; }
         }
       `}</style>
     </section>

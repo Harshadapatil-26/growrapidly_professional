@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
-import Founder from './components/Founder'
+import Leadership from './components/Leadership'
+import Team from './components/Team'
 import Services from './components/Services'
 import Strategy from './components/Strategy'
 import WhyChooseUs from './components/WhyChooseUs'
@@ -12,6 +13,7 @@ import CTA from './components/CTA'
 import Footer from './components/Footer'
 import StrategicSupport from './components/StrategicSupport'
 import ServiceDetails from './pages/ServiceDetails'
+import WhatsAppFloating from './components/WhatsAppFloating'
 
 // Component to handle scroll reveals in a multi-page context
 const ScrollReveal = ({ children }) => {
@@ -37,9 +39,10 @@ const ScrollReveal = ({ children }) => {
 const HomePage = () => (
     <>
         <div className="reveal"><Hero /></div>
-        <div className="reveal"><About /></div>
-        <div className="reveal"><Founder /></div>
         <div className="reveal"><Services /></div>
+        <div className="reveal"><About /></div>
+        <div className="reveal"><Leadership /></div>
+        <div className="reveal"><Team /></div>
         <div className="reveal"><Strategy /></div>
         <div className="reveal"><StrategicSupport /></div>
         <div className="reveal"><WhyChooseUs /></div>
@@ -74,6 +77,7 @@ function App() {
                             </>
                         } />
                     </Routes>
+                    <WhatsAppFloating />
                 </div>
             </ScrollReveal>
         </Router>

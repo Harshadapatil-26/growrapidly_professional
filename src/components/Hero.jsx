@@ -20,6 +20,17 @@ const Hero = () => {
 
   return (
     <section className="hero-modern premium-grain">
+      <div className="hero-visual-system">
+        {images.map((img, index) => (
+          <div
+            key={index}
+            className={`floating-image-card ${img.className}`}
+            style={{ transform: `translateY(${scrollY * img.parallax}px)` }}
+          >
+            <img src={img.src} alt={img.alt} />
+          </div>
+        ))}
+      </div>
       <div className="container hero-grid">
         <div className="hero-text-content reveal active">
           <h1 className="hero-headline">
@@ -35,36 +46,25 @@ const Hero = () => {
             <a href="#services" className="btn-hero-secondary">Explore Services</a>
           </div>
         </div>
-
-        <div className="hero-visual-system">
-          {images.map((img, index) => (
-            <div
-              key={index}
-              className={`floating-image-card ${img.className}`}
-              style={{ transform: `translateY(${scrollY * img.parallax}px)` }}
-            >
-              <img src={img.src} alt={img.alt} />
-            </div>
-          ))}
-        </div>
       </div>
 
       <style>{`
         .hero-modern {
           background-color: var(--light-bg);
-          min-height: 100vh;
+          min-height: 80vh;
           display: flex;
           align-items: center;
-          padding: 120px 0;
+          padding: 120px 0 60px 0;
           overflow: hidden;
           position: relative;
         }
 
         .hero-grid {
-          display: grid;
-          grid-template-columns: 1.2fr 1fr;
-          gap: 60px;
+          display: flex;
+          flex-direction: column;
           align-items: center;
+          text-align: center;
+          gap: 60px;
           position: relative;
           z-index: 10;
         }
@@ -86,13 +86,14 @@ const Hero = () => {
           font-size: 1.25rem;
           color: var(--text-muted);
           line-height: 1.6;
-          max-width: 600px;
-          margin-bottom: 48px;
+          max-width: 800px;
+          margin: 0 auto 48px;
         }
 
         .hero-cta-group {
           display: flex;
           gap: 20px;
+          justify-content: center;
         }
 
         .btn-hero-primary {
@@ -130,19 +131,26 @@ const Hero = () => {
         }
 
         .hero-visual-system {
-          position: relative;
-          height: 600px;
+          position: absolute;
+          top: 0;
+          left: 0;
           width: 100%;
+          height: 100%;
+          z-index: 1;
+          pointer-events: none;
         }
 
         .floating-image-card {
           position: absolute;
-          border-radius: 16px;
+          border-radius: 24px;
           overflow: hidden;
           box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-          animation: float 6s ease-in-out infinite;
+          animation: float 8s ease-in-out infinite;
           background: white;
           border: 1px solid rgba(0,0,0,0.05);
+          filter: blur(2px);
+          opacity: 0.35;
+          transition: all 0.5s ease;
         }
 
         .floating-image-card img {
@@ -158,30 +166,31 @@ const Hero = () => {
         }
 
         /* Responsive positioning */
-        .card-1 { width: 280px; height: 180px; top: -50px; right: 0; animation-delay: 0s; z-index: 5; }
-        .card-2 { width: 320px; height: 200px; top: 180px; right: -80px; animation-delay: 1s; z-index: 6; }
-        .card-3 { width: 240px; height: 160px; bottom: 0; right: 20px; animation-delay: 2s; z-index: 4; }
-        .card-4 { width: 200px; height: 140px; top: 120px; left: -150px; opacity: 0.6; animation-delay: 1.5s; z-index: 1; filter: blur(1px); }
-        .card-5 { width: 220px; height: 150px; bottom: 180px; left: -100px; opacity: 0.4; animation-delay: 2.5s; z-index: 1; filter: blur(2px); }
-        .card-6 { width: 180px; height: 120px; top: 380px; right: 240px; animation-delay: 0.5s; z-index: 3; }
+        /* Scattered background positions */
+        /* Edge-to-edge scattered background positions */
+        .card-1 { width: 500px; height: 350px; top: 0%; left: -10%; animation-delay: 0s; transform: rotate(-8deg); }
+        .card-2 { width: 550px; height: 400px; top: 10%; right: -15%; animation-delay: 1s; transform: rotate(10deg); }
+        .card-3 { width: 450px; height: 320px; bottom: -5%; left: -5%; animation-delay: 2s; transform: rotate(15deg); }
+        .card-4 { width: 420px; height: 280px; top: 35%; right: 10%; animation-delay: 1.5s; transform: rotate(-5deg); filter: blur(4px); opacity: 0.25; }
+        .card-5 { width: 480px; height: 350px; bottom: 5%; right: -5%; animation-delay: 2.5s; transform: rotate(8deg); filter: blur(3px); opacity: 0.25; }
+        .card-6 { width: 400px; height: 260px; top: 45%; left: 5%; animation-delay: 0.5s; transform: rotate(-12deg); filter: blur(5px); opacity: 0.2; }
 
         @media (max-width: 1024px) {
           .hero-grid { grid-template-columns: 1fr; text-align: center; }
           .hero-subheadline { margin: 0 auto 48px; }
           .hero-cta-group { justify-content: center; }
-          .hero-visual-system { height: 400px; margin-top: 60px; }
-          .card-2 { right: 0; }
-          .card-4, .card-5 { display: none; }
+          .hero-visual-system { display: block; }
+          .card-4, .card-5, .card-6 { opacity: 0.2; }
+          .card-1, .card-2, .card-3 { width: 250px; height: 180px; }
         }
 
         @media (max-width: 768px) {
-          .hero-modern { padding: 80px 0; }
-          .hero-headline { font-size: 2.5rem; }
-          .hero-cta-group { flex-direction: column; }
-          .hero-visual-system { height: 300px; }
-          .card-1 { width: 200px; height: 130px; }
-          .card-2 { width: 240px; height: 150px; top: 100px; }
-          .card-3 { width: 180px; height: 120px; }
+          .hero-modern { padding: 100px 0 60px 0; }
+          .hero-headline { font-size: 2.25rem; }
+          .hero-cta-group { flex-direction: column; width: 100%; align-items: stretch; }
+          .btn-hero-primary, .btn-hero-secondary { text-align: center; }
+          .hero-visual-system { opacity: 0.5; }
+          .card-1, .card-2, .card-3 { width: 150px; height: 100px; }
         }
 
         /* Fade-up animation for text */
