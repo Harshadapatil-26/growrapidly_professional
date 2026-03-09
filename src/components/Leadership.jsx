@@ -209,6 +209,11 @@ const Leadership = () => {
                     .leadership-split.split-reverse .leadership-visual { order: -1; }
                     .leadership-visual { order: -1; max-width: 500px; margin: 0 auto; }
                     .featured-leader-frame { max-height: 400px; }
+                    .leadership-content .display-title { font-size: 2.25rem; }
+                }
+
+                @media (max-width: 480px) {
+                    .leadership-content .display-title { font-size: 1.85rem; }
                 }
             `}</style>
       </div>

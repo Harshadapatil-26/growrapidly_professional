@@ -80,7 +80,7 @@ const WhyChooseUs = () => {
 
                 @media (max-width: 1024px) {
                     .advantage-grid { grid-template-columns: 1fr; }
-                    .support-card { padding: 40px; }
+                    .support-card { padding: 40px 25px; }
                 }
             `}</style>
     </section>

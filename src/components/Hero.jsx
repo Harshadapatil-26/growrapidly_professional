@@ -341,6 +341,7 @@ const Hero = () => {
                 }
 
                 @media (max-width: 1024px) {
+                    .hero-v3 { height: auto; padding: 120px 0 80px; }
                     .hero-image-wrap {
                         width: 100%;
                         clip-path: none;
@@ -353,11 +354,22 @@ const Hero = () => {
                         display: none;
                     }
                     .hero-main-title {
-                        font-size: 2.75rem;
+                        font-size: 2.25rem;
+                    }
+                    .title-row {
+                        flex-wrap: wrap;
+                        gap: 0.2em;
                     }
                     .hero-btns {
                         flex-direction: column;
                     }
+                    .hero-divider { margin: 30px 0; }
+                    .hero-lead { font-size: 1.1rem; margin-bottom: 40px; }
+                }
+
+                @media (max-width: 480px) {
+                    .hero-main-title { font-size: 1.85rem; }
+                    .connector { font-size: 0.5em; }
                 }
             `}</style>
         </section>

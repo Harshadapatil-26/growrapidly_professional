@@ -234,9 +234,13 @@ const Services = () => {
 
                 @media (max-width: 768px) {
                     .capabilities-grid { grid-template-columns: 1fr; gap: 20px; }
-                    .cap-body { padding: 40px 30px; }
-                    .philosophy-strip { padding: 50px 30px; text-align: center; }
-                    .philosophy-header h2 { font-size: 2.5rem; }
+                    .cap-body { padding: 40px 25px; }
+                    .philosophy-strip { padding: 60px 20px; text-align: left; }
+                    .philosophy-header h2 { font-size: 2.15rem; margin-top: 20px; }
+                }
+
+                @media (max-width: 480px) {
+                    .philosophy-header h2 { font-size: 1.85rem; }
                 }
             `}</style>
     </section>
