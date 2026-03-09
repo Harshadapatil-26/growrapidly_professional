@@ -7,59 +7,87 @@ const Footer = () => {
     <footer className="footer bg-white premium-grain">
       <div className="container">
         <div className="footer-main">
-          <h2 className="display-title">READY TO <span className="text-green">WIN?</span></h2>
-          <div className="footer-links-grid">
-            <div className="f-col">
-              <span className="col-tag text-green">Strategize</span>
-              <a href="/#about">The Winning Anyway Mindset</a>
-              <Link to="/services">Battleground Intelligence</Link>
-              <a href="/#strategy">The Blueprint</a>
+          <div className="footer-top-grid">
+            <div className="footer-brand-col">
+              <div className="f-logo">
+                <img src={logo} alt="GROWRAPIDLY" />
+                <span className="text-black">GROWRAPIDLY</span>
+              </div>
+              <p className="f-mission opacity-70 text-black">
+                Architecting institutional dominance through precision narrative deployment,
+                high-frequency digital engagement, and data-driven sentiment analysis.
+                We deliver signal in a world of noise.
+              </p>
             </div>
-            <div className="f-col">
-              <span className="col-tag text-blue">Connect</span>
-              <a href="#">LinkedIn</a>
-              <a href="#">Twitter</a>
-              <a href="#">Instagram</a>
-            </div>
-            <div className="f-col">
-              <span className="col-tag text-orange">Engage</span>
-              <a href="#contact">Contact Strategy</a>
-              <a href="/#why-us">Newsletter Brief</a>
-              <a href="#">Privacy Systems</a>
+
+            <div className="footer-links-grid">
+              <div className="f-col">
+                <span className="col-tag text-emerald">Strategize</span>
+                <a href="/#about">Mindset</a>
+                <Link to="/services">Intelligence</Link>
+                <a href="/#strategy">Blueprint</a>
+                <a href="/#impact">Impact</a>
+              </div>
+              <div className="f-col">
+                <span className="col-tag text-navy">Connect</span>
+                <a href="mailto:growrapidly1@gmail.com">Gmail</a>
+                <a href="https://www.instagram.com/growrapidly_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+              </div>
+              <div className="f-col">
+                <span className="col-tag text-gold">Contact</span>
+                <a href="mailto:growrapidly1@gmail.com" className="contact-link">growrapidly1@gmail.com</a>
+                <p className="contact-text opacity-60">Available 24/7 For Strategic Support</p>
+              </div>
             </div>
           </div>
 
           <div className="footer-bottom-line">
-            <div className="f-logo">
-              <img src={logo} alt="Grow Rapidly" />
-              <span className="text-black">GROW RAPIDLY</span>
+            <p className="copyright opacity-70 text-black">© 2026 GROWRAPIDLY STRATEGIC SYSTEMS. ALL RIGHTS RESERVED.</p>
+            <div className="footer-legal-links">
+              <a href="#">Privacy Protocol</a>
+              <a href="#">Terms of Engagement</a>
             </div>
-            <p className="copyright opacity-70 text-black">© 2026 GROW RAPIDLY STRATEGIC SYSTEMS. BUILT TO WIN.</p>
           </div>
         </div>
       </div>
 
       <style>{`
                 .footer {
-                    padding: 140px 0 60px;
-                    border-top: 1px solid rgba(0,0,0,0.05);
+                    padding: 100px 0 40px;
+                    border-top: 1px solid rgba(10, 25, 47, 0.05);
                     background: var(--white);
                 }
 
                 .footer-main {
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
-                    text-align: center;
+                }
+
+                .footer-top-grid {
+                    display: grid;
+                    grid-template-columns: 1.2fr 2fr;
+                    gap: 100px;
+                    margin-bottom: 80px;
+                }
+
+                .footer-brand-col {
+                    max-width: 400px;
+                }
+
+                .f-mission {
+                    margin-top: 25px;
+                    line-height: 1.8;
+                    font-size: 0.95rem;
+                    font-weight: 500;
                 }
 
                 .footer-links-grid {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
-                    gap: 100px;
-                    margin-top: 100px;
+                    gap: 60px;
                     width: 100%;
-                    max-width: 1000px;
                 }
 
                 .col-tag {
@@ -73,25 +101,30 @@ const Footer = () => {
 
                 .f-col a {
                     display: block;
-                    color: var(--black);
+                    color: var(--brand-black);
                     text-decoration: none;
-                    font-weight: 700;
-                    font-size: 1rem;
+                    font-weight: 600;
+                    font-size: 0.95rem;
                     margin-bottom: 1rem;
-                    opacity: 0.7;
+                    opacity: 0.6;
                     transition: var(--transition);
                 }
 
                 .f-col a:hover {
                     opacity: 1;
                     color: var(--brand-green);
+                    transform: translateX(5px);
+                }
+
+                .contact-text {
+                    font-size: 0.85rem;
+                    margin-top: 10px;
+                    line-height: 1.5;
                 }
 
                 .footer-bottom-line {
-                    margin-top: 140px;
-                    width: 100%;
                     padding-top: 40px;
-                    border-top: 1px solid rgba(0,0,0,0.1);
+                    border-top: 1px solid rgba(26, 26, 26, 0.05);
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -100,7 +133,7 @@ const Footer = () => {
                 .f-logo {
                     display: flex;
                     align-items: center;
-                    gap: 15px;
+                    gap: 12px;
                 }
 
                 .f-logo img {
@@ -108,20 +141,50 @@ const Footer = () => {
                 }
 
                 .f-logo span {
-                    font-weight: 900;
-                    letter-spacing: 0.1em;
+                    font-weight: 800;
+                    letter-spacing: 0.15em;
+                    font-size: 1rem;
+                    color: var(--brand-black);
                 }
 
                 .copyright {
                     font-size: 0.75rem;
-                    font-weight: 700;
+                    font-weight: 600;
                     text-transform: uppercase;
                     letter-spacing: 0.05em;
+                    color: var(--brand-blue);
+                    opacity: 0.5;
+                }
+
+                .footer-legal-links {
+                    display: flex;
+                    gap: 30px;
+                }
+
+                .footer-legal-links a {
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    color: var(--brand-blue);
+                    opacity: 0.5;
+                    text-decoration: none;
+                    transition: var(--transition);
+                }
+
+                .footer-legal-links a:hover {
+                    opacity: 1;
+                }
+
+                @media (max-width: 1024px) {
+                    .footer-top-grid { grid-template-columns: 1fr; gap: 60px; }
+                    .footer-links-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
                 }
 
                 @media (max-width: 768px) {
-                    .footer-links-grid { grid-template-columns: 1fr; gap: 60px; }
-                    .footer-bottom-line { flex-direction: column; gap: 30px; }
+                    .footer-links-grid { grid-template-columns: 1fr; }
+                    .footer-bottom-line { flex-direction: column; gap: 20px; text-align: center; }
+                    .footer-legal-links { justify-content: center; }
                 }
             `}</style>
     </footer>

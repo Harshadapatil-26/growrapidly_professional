@@ -5,184 +5,213 @@ const Leadership = () => {
     {
       name: "Bipin M. Jagtap",
       role: "FOUNDER & CEO",
-      img: "/images/team/bipin.png"
+      tag: "Ideological Authority",
+      title: "IDEOLOGICAL LEADER FOR YOUTH GENERATION.",
+      desc: "Strategizing at the intersection of technology, narrative, and political mobilization to architect decisive institutional advantages.",
+      img: "/images/team/bipin.png",
+      highlights: [
+        "All systemic operations support rapid narrative deployment.",
+        "Precision ground intelligence for maximum constituency impact.",
+        "Fully optimized digital ecosystems for modern leadership."
+      ]
     },
     {
       name: "Prathamesh G. Pawar",
       role: "CMO",
-      img: "/images/team/prathamesh.png"
+      tag: "Growth Architect",
+      title: "ENGINEERING MASS MARKET DOMINANCE.",
+      desc: "Deploying high-frequency digital engagement strategies to capture and convert complex demographics into loyal movements.",
+      img: "/images/team/prathamesh.png",
+      highlights: [
+        "Advanced viral mechanics for rapid narrative saturation.",
+        "Data-driven sentiment analysis and real-time response.",
+        "Precision-targeted 360° digital mobilization pipelines."
+      ]
     }
   ];
 
   return (
     <section id="leadership" className="leadership premium-grain">
       <div className="container">
-        <div className="leadership-top reveal text-center">
-          <h2 className="display-title">
-            OUR <span className="text-green">STRATEGIC</span> BOARD
-          </h2>
-          <p className="text-black opacity-70 max-800 mx-auto">
-            Experienced advisors navigating the intersection of technology,
-            narrative, and political mobilization.
-          </p>
-        </div>
+        {leaders.map((leader, index) => (
+          <div key={index} className={`leadership-split ${index % 2 !== 0 ? 'split-reverse' : ''} reveal`}>
+            <div className="leadership-content">
+              <span className="section-tag">{leader.tag}</span>
+              <h2 className="display-title">
+                {leader.title.split(' ').map((word, i, arr) => (
+                  <React.Fragment key={i}>
+                    {i === arr.length - 1 ? <span className="text-orange">{word}</span> : word}{' '}
+                  </React.Fragment>
+                ))}
+              </h2>
+              <p className="lead-text">
+                {leader.desc}
+              </p>
 
-        <div className="leadership-grid reveal">
-          {leaders.map((leader, index) => (
-            <div key={index} className="leader-card">
-              <div className="leader-img-frame">
-                <img src={leader.img} alt={leader.name} className="leader-img" />
-                <div className="leader-accent bg-green"></div>
-              </div>
-              <div className="leader-info">
-                <h3 className="leader-name text-black">{leader.name}</h3>
-                <p className="leader-role text-green">{leader.role}</p>
-                <div className="leader-social">
-                  <span className="social-icon">IN</span>
+              <ul className="strategic-highlights">
+                {leader.highlights.map((h, i) => (
+                  <li key={i}>
+                    <span className="check-icon">✓</span>
+                    {h}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="ceo-badge">
+                <div className="badge-info">
+                  <h3 className="badge-name">{leader.name}</h3>
+                  <p className="badge-role">{leader.role}</p>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
 
-        <div className="leadership-mission reveal">
-          <div className="mission-stats">
-            <div className="m-stat">
-              <span className="m-val text-green">24/7</span>
-              <span className="m-label">Strategic Support</span>
-            </div>
-            <div className="m-stat">
-              <span className="m-val text-blue">94%</span>
-              <span className="m-label">Voter Engagement</span>
+            <div className="leadership-visual">
+              <div className="featured-leader-frame">
+                <img src={leader.img} alt={leader.name} className="featured-leader-img" />
+                <div className="featured-overlay"></div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        ))}
 
-      <style>{`
-                .text-center { text-align: center; }
-                .mx-auto { margin-left: auto; margin-right: auto; }
-
+        <style>{`
                 .leadership {
-                    padding: var(--section-padding) 0;
+                    padding: 100px 0;
                     background: var(--white);
+                    overflow: hidden;
                 }
 
-                .leadership-top {
+                .leadership-split {
+                    display: grid;
+                    grid-template-columns: 1.2fr 1fr;
+                    gap: 80px;
+                    align-items: center;
                     margin-bottom: 100px;
                 }
 
-                .leadership-top h2 {
-                    font-size: clamp(2.5rem, 6vw, 4.5rem);
+                .leadership-split:last-of-type {
+                    margin-bottom: 0px;
                 }
 
-                .leadership-grid {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 60px;
-                    max-width: 1000px;
-                    margin: 0 auto 100px;
+                .leadership-split.split-reverse {
+                    grid-template-columns: 1fr 1.2fr;
                 }
 
-                .leader-card {
-                    text-align: center;
+                .leadership-split.split-reverse .leadership-content {
+                    order: 2;
                 }
 
-                .leader-img-frame {
-                    position: relative;
-                    margin-bottom: 30px;
+                .leadership-split.split-reverse .leadership-visual {
+                    order: 1;
                 }
 
-                .leader-img {
-                    width: 100%;
-                    aspect-ratio: 1/1;
-                    object-fit: cover;
-                    filter: grayscale(1) contrast(1.1) brightness(1.1);
-                    border: 1px solid rgba(0,0,0,0.05);
-                    transition: var(--transition);
+                .leadership-content {
+                    max-width: 700px;
                 }
 
-                .leader-card:hover .leader-img {
-                    filter: grayscale(0);
-                    transform: scale(1.02);
+                .lead-text {
+                    font-size: 1.1rem;
+                    color: var(--brand-blue);
+                    opacity: 0.7;
+                    margin-bottom: 25px;
+                    line-height: 1.6;
                 }
 
-                .leader-accent {
-                    position: absolute;
-                    bottom: -10px;
-                    right: -10px;
-                    width: 60px;
-                    height: 60px;
-                    z-index: -1;
-                    opacity: 0.1;
+                .strategic-highlights {
+                    list-style: none;
+                    margin-bottom: 35px;
                 }
 
-                .leader-name {
-                    font-size: 1.5rem;
-                    margin-bottom: 5px;
-                    letter-spacing: 0.02em;
+                .strategic-highlights li {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 15px;
+                    margin-bottom: 12px;
+                    font-weight: 600;
+                    color: var(--brand-blue);
+                    font-size: 0.95rem;
                 }
 
-                .leader-role {
-                    font-size: 0.75rem;
+                .check-icon {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 20px;
+                    height: 20px;
+                    background: rgba(0, 100, 0, 0.1);
+                    color: var(--brand-green);
+                    border-radius: 50%;
+                    font-size: 0.7rem;
+                    font-weight: 800;
+                    flex-shrink: 0;
+                    margin-top: 2px;
+                }
+
+                .ceo-badge {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 12px 25px;
+                    background: var(--brand-black); /* Changed from --brand-navy */
+                    color: var(--white);
+                    border-radius: var(--radius-sm);
+                    margin-top: 5px;
+                }
+
+                .badge-name {
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    margin-bottom: 2px;
+                    color: var(--white);
+                }
+
+                .badge-role {
+                    font-size: 0.7rem;
                     font-weight: 800;
                     text-transform: uppercase;
                     letter-spacing: 0.2em;
-                    margin-bottom: 20px;
+                    color: var(--brand-orange);
                 }
 
-                .leader-social {
-                    display: flex;
-                    justify-content: center;
+                .leadership-visual {
+                    position: relative;
                 }
 
-                .social-icon {
-                    width: 24px;
-                    height: 24px;
-                    border: 1px solid rgba(0,0,0,0.1);
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 0.6rem;
-                    font-weight: 900;
-                    color: rgba(0,0,0,0.4);
+                .featured-leader-frame {
+                    position: relative;
+                    border-radius: 30px;
+                    overflow: hidden;
+                    box-shadow: var(--shadow-hover);
+                    background: var(--light-gray);
+                    height: 500px;
                 }
 
-                .mission-stats {
-                    display: flex;
-                    justify-content: center;
-                    gap: 100px;
-                    padding-top: 80px;
-                    border-top: 1px solid rgba(0,0,0,0.05);
-                }
-
-                .m-stat {
-                    text-align: center;
-                }
-
-                .m-val {
+                .featured-leader-img {
+                    width: 100%;
+                    height: 100%;
                     display: block;
-                    font-size: 3rem;
-                    font-weight: 900;
-                    font-family: var(--font-heading);
-                    line-height: 1;
-                    margin-bottom: 10px;
+                    object-fit: cover;
+                    object-position: top center;
+                    filter: contrast(1.05);
+                    transition: var(--transition);
                 }
 
-                .m-label {
-                    font-size: 0.75rem;
-                    font-weight: 800;
-                    text-transform: uppercase;
-                    letter-spacing: 0.15em;
-                    opacity: 0.6;
+                .featured-overlay {
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(to top, rgba(10, 25, 47, 0.2), transparent);
+                    pointer-events: none;
                 }
 
-                @media (max-width: 768px) {
-                    .leadership-grid { grid-template-columns: 1fr; gap: 40px; }
-                    .mission-stats { gap: 40px; flex-direction: column; }
+                @media (max-width: 1100px) {
+                    .leadership-split { grid-template-columns: 1fr; gap: 40px; margin-bottom: 80px; }
+                    .leadership-split.split-reverse { grid-template-columns: 1fr; }
+                    .leadership-split.split-reverse .leadership-content { order: 1; }
+                    .leadership-split.split-reverse .leadership-visual { order: -1; }
+                    .leadership-visual { order: -1; max-width: 500px; margin: 0 auto; }
+                    .featured-leader-frame { max-height: 400px; }
                 }
             `}</style>
+      </div>
     </section>
   );
 };

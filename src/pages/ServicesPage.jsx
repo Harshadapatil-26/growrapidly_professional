@@ -69,8 +69,8 @@ const ServicesPage = () => {
             <section className="services-hero bg-white">
                 <div className="container">
                     <div className="reveal active">
-                        <span className="section-tag text-blue">Grow Rapidly Capabilities</span>
-                        <h1 className="display-title">STRATEGIC <br /><span className="text-orange">POWER.</span></h1>
+                        <span className="section-tag">GROWRAPIDLY Capabilities</span>
+                        <h1 className="display-title">STRATEGIC <br /><span className="text-emerald">POWER.</span></h1>
                         <p className="text-black opacity-70 max-600">
                             We deliver a comprehensive suite of tactical services designed for institutional leaders and innovative businesses.
                         </p>
@@ -83,14 +83,14 @@ const ServicesPage = () => {
                     <div className="container">
                         <div className="detail-split reveal">
                             <div className="detail-info">
-                                <span className={`service-num ${index % 2 !== 0 ? 'text-green' : 'text-blue'}`}>{service.id}</span>
+                                <span className={`service-num ${index % 2 !== 0 ? 'text-emerald' : 'text-navy'}`}>{service.id}</span>
                                 <span className="service-tag-small uppercase text-black">{service.tag}</span>
                                 <h2 className="section-head text-black">{service.title}</h2>
                                 <p className="opacity-70 service-desc-large text-black">{service.description}</p>
                                 <ul className="feature-list">
                                     {service.features.map(f => (
                                         <li key={f}>
-                                            <div className={`feature-line ${index % 2 !== 0 ? 'bg-green' : 'bg-blue'}`}></div>
+                                            <div className={`feature-line ${index % 2 !== 0 ? 'bg-emerald' : 'bg-navy'}`}></div>
                                             <span className="text-black">{f}</span>
                                         </li>
                                     ))}
@@ -109,7 +109,7 @@ const ServicesPage = () => {
 
             <section className="cta-banner bg-white premium-grain">
                 <div className="container text-center">
-                    <h2 className="display-title">READY TO ARCHITECT <br /><span className="text-green">VICTORY?</span></h2>
+                    <h2 className="display-title">READY TO ARCHITECT <br /><span className="text-emerald">VICTORY?</span></h2>
                     <div className="mt-50">
                         <a href="#contact" className="btn btn-black">INITIATE STRATEGY</a>
                     </div>
@@ -129,7 +129,7 @@ const ServicesPage = () => {
 
                 .service-detail {
                     padding: 140px 0;
-                    border-bottom: 1px solid rgba(0,0,0,0.05);
+                    border-bottom: 1px solid rgba(10, 25, 47, 0.05);
                 }
 
                 .detail-split {
@@ -141,71 +141,79 @@ const ServicesPage = () => {
 
                 .service-num {
                     font-family: var(--font-heading);
-                    font-size: 4rem;
-                    font-weight: 900;
+                    font-size: 1.25rem;
+                    font-weight: 800;
+                    color: var(--brand-orange);
+                    margin-bottom: 15px;
                     display: block;
-                    line-height: 1;
-                    margin-bottom: 20px;
                 }
 
                 .service-tag-small {
-                    font-size: 0.875rem;
+                    font-size: 0.85rem;
                     font-weight: 800;
-                    letter-spacing: 0.2em;
-                    margin-bottom: 1rem;
+                    letter-spacing: 0.25em;
+                    margin-bottom: 1.5rem;
                     display: block;
+                    color: var(--brand-blue);
                 }
 
                 .service-desc-large {
-                    font-size: 1.25rem;
-                    margin: 30px 0 40px;
-                    line-height: 1.6;
+                    font-size: 1.35rem;
+                    margin: 35px 0 45px;
+                    line-height: 1.7;
+                    color: var(--brand-black);
+                    font-weight: 500;
                 }
 
                 .feature-list {
                     list-style: none;
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
+                    gap: 24px;
                 }
 
                 .feature-list li {
                     display: flex;
                     align-items: center;
                     gap: 20px;
-                    font-weight: 800;
+                    font-weight: 700;
                     font-family: var(--font-heading);
                     text-transform: uppercase;
-                    font-size: 0.95rem;
+                    font-size: 0.9rem;
+                    letter-spacing: 0.1em;
+                    color: var(--brand-blue);
                 }
 
                 .feature-line {
-                    width: 30px;
+                    width: 40px;
                     height: 2px;
                 }
 
                 .detail-img-wrap {
                     position: relative;
-                    height: 500px;
+                    height: 550px;
+                    border: 1px solid rgba(10, 25, 47, 0.1);
+                    border-radius: var(--radius-sm);
+                    overflow: hidden;
                 }
 
-                .detail-img-wrap img {
+                .services-hero-img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    filter: grayscale(1) brightness(1.1);
+                    filter: brightness(0.9) contrast(1.1);
                 }
 
                 .img-overlay-light-detail {
                     position: absolute;
                     inset: 0;
-                    background: linear-gradient(to right, rgba(255,255,255,0.3), var(--white));
+                    background: linear-gradient(to right, rgba(255,255,255,0.1), var(--white) 90%);
                     z-index: 2;
                 }
 
                 .cta-banner {
                     padding: 180px 0;
-                    border-top: 1px solid rgba(0,0,0,0.1);
+                    border-top: 1px solid rgba(10, 25, 47, 0.1);
                 }
 
                 .text-center { text-align: center; }

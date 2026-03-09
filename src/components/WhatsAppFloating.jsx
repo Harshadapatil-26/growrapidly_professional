@@ -23,39 +23,27 @@ const WhatsAppFloating = () => {
                     position: fixed;
                     bottom: 40px;
                     right: 40px;
-                    background-color: var(--primary);
-                    color: white;
                     width: 60px;
                     height: 60px;
+                    background-color: var(--brand-green);
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 10px 25px rgba(118, 184, 40, 0.3);
-                    z-index: 1000;
-                    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                    cursor: pointer;
                     text-decoration: none;
+                    box-shadow: 0 10px 25px rgba(122, 193, 67, 0.3);
+                    z-index: 999;
+                    transition: var(--transition);
                 }
+
                 .whatsapp-float:hover {
-                    transform: scale(1.1) translateY(-5px);
-                    box-shadow: 0 15px 30px rgba(118, 184, 40, 0.4);
-                    background-color: var(--primary-dark);
+                    transform: scale(1.1) rotate(5deg);
+                    background-color: var(--brand-black);
                 }
-                .whatsapp-float::before {
+
+                .whatsapp-float::after {
                     content: '';
                     position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 50%;
-                    background-color: var(--primary);
-                    opacity: 0.3;
-                    z-index: -1;
-                    animation: pulse-whatsapp 2s infinite;
-                }
-                @keyframes pulse-whatsapp {
-                    0% { transform: scale(1); opacity: 0.3; }
-                    70% { transform: scale(1.5); opacity: 0; }
                     100% { transform: scale(1); opacity: 0; }
                 }
                 @media (max-width: 768px) {

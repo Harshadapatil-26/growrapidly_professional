@@ -19,7 +19,7 @@ const Hero = () => {
                 <div className="hero-branding">
                     <div className="system-status">
                         <span className="dot"></span>
-                        <span className="status-text text-blue">Grow Rapidly Intelligence</span>
+                        <span className="status-text text-navy">Strategic Intelligence Unit</span>
                     </div>
                 </div>
 
@@ -27,35 +27,35 @@ const Hero = () => {
                     <div className="message-block reveal active">
                         <h1 className="hero-main-title">
                             <div className="title-row">
-                                <span className="word">Strategy</span>
-                                <span className="connector">for</span>
-                                <span className="text-blue emphasis">Leaders.</span>
+                                <span className="word">Precision</span>
+                                <span className="connector">in</span>
+                                <span className="text-navy emphasis">Marketing.</span>
+                            </div>
+                            <div className="title-row">
+                                <span className="word">Authority</span>
+                                <span className="connector">in</span>
+                                <span className="text-saffron emphasis">Politics.</span>
                             </div>
                             <div className="title-row">
                                 <span className="word">Growth</span>
                                 <span className="connector">for</span>
-                                <span className="text-orange emphasis">Campaigns.</span>
-                            </div>
-                            <div className="title-row">
-                                <span className="word">Impact</span>
-                                <span className="connector">for the</span>
-                                <span className="text-green emphasis">Nation.</span>
+                                <span className="text-emerald emphasis">Leaders.</span>
                             </div>
                         </h1>
 
                         <div className="hero-divider"></div>
 
                         <p className="hero-lead text-black">
-                            We deliver institutional-grade political strategy.
-                            Built on data science, psychological warfare, and an unwavering commitment to victory.
+                            We deliver institutional-grade strategic solutions.
+                            Built on advanced data science, behavioral linguistics, and an unwavering commitment to dominance.
                         </p>
 
                         <div className="hero-btns">
-                            <Link to="/services" className="btn-axiom-fill">
-                                INITIATE OPERATION
+                            <Link to="/services" className="btn btn-black">
+                                INITIATE STRATEGY
                                 <span className="btn-icon">→</span>
                             </Link>
-                            <a href="#about" className="btn-axiom-outline">THE BLUEPRINT</a>
+                            <a href="#about" className="btn btn-outline-black">THE BLUEPRINT</a>
                         </div>
                     </div>
                 </div>
@@ -102,32 +102,32 @@ const Hero = () => {
 
                 .shape {
                     position: absolute;
-                    filter: blur(80px);
-                    opacity: 0.15;
+                    filter: blur(100px);
+                    opacity: 0.12;
                     border-radius: 50%;
-                    animation: float 20s infinite alternate ease-in-out;
+                    animation: float 25s infinite alternate ease-in-out;
                 }
 
                 .shape-1 {
-                    width: 400px;
-                    height: 400px;
+                    width: 500px;
+                    height: 500px;
                     background: var(--brand-blue);
-                    top: -100px;
+                    top: -150px;
                     left: -100px;
                 }
 
                 .shape-2 {
-                    width: 300px;
-                    height: 300px;
+                    width: 400px;
+                    height: 400px;
                     background: var(--brand-orange);
-                    bottom: 10%;
-                    right: 20%;
-                    animation-delay: -5s;
+                    bottom: 5%;
+                    right: 15%;
+                    animation-delay: -7s;
                 }
 
                 @keyframes float {
-                    0% { transform: translate(0, 0) rotate(0deg); }
-                    100% { transform: translate(50px, 100px) rotate(30deg); }
+                    0% { transform: translate(0, 0) scale(1); }
+                    100% { transform: translate(60px, 80px) scale(1.1); }
                 }
 
                 .hero-image-wrap {
@@ -136,21 +136,21 @@ const Hero = () => {
                     right: 0;
                     width: 55%;
                     height: 100%;
-                    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+                    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
                 }
 
                 .hero-image-main {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    filter: grayscale(1) brightness(0.7) contrast(1.1);
+                    filter: brightness(0.7) contrast(1.1);
                     opacity: 1;
                 }
 
                 .hero-image-overlay {
                     position: absolute;
                     inset: 0;
-                    background: linear-gradient(to right, var(--white) 0%, rgba(255,255,255,0.7) 30%, transparent 100%);
+                    background: linear-gradient(to right, var(--white) 0%, rgba(255,255,255,0.6) 30%, transparent 100%);
                 }
 
                 .hero-interface {
@@ -161,118 +161,93 @@ const Hero = () => {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    padding: 40px 0;
+                    padding-top: 60px;
+                    padding-bottom: 60px;
                 }
 
                 .system-status {
                     display: flex;
                     align-items: center;
-                    gap: 10px;
+                    gap: 12px;
                 }
 
                 .dot {
-                    width: 6px;
-                    height: 6px;
+                    width: 8px;
+                    height: 8px;
                     background: var(--brand-green);
                     border-radius: 50%;
-                    box-shadow: 0 0 10px var(--brand-green);
+                    box-shadow: 0 0 15px var(--brand-green);
                     animation: statusPulse 2s infinite;
                 }
 
                 @keyframes statusPulse {
-                    0% { opacity: 1; }
-                    50% { opacity: 0.3; }
-                    100% { opacity: 1; }
+                    0% { opacity: 1; transform: scale(1); }
+                    50% { opacity: 0.4; transform: scale(0.9); }
+                    100% { opacity: 1; transform: scale(1); }
                 }
 
                 .status-text {
                     font-size: 0.75rem;
-                    font-weight: 800;
+                    font-weight: 700;
                     text-transform: uppercase;
-                    letter-spacing: 0.2em;
+                    letter-spacing: 0.25em;
+                    color: var(--brand-blue);
                 }
 
                 .hero-main-title {
-                    font-size: clamp(2rem, 5vw, 3.5rem);
-                    line-height: 1.1;
+                    font-size: clamp(2.5rem, 6vw, 4.5rem);
+                    line-height: 1.05;
                     margin-bottom: 30px;
                 }
 
                 .title-row {
                     display: flex;
                     align-items: baseline;
-                    gap: 0.3em;
-                    margin-bottom: 0.1em;
+                    gap: 0.35em;
+                    margin-bottom: 0.15em;
                 }
 
                 .connector {
-                    font-size: 0.4em;
+                    font-size: 0.45em;
                     text-transform: lowercase;
                     font-weight: 500;
-                    opacity: 0.6;
+                    opacity: 0.5;
                     font-family: var(--font-main);
                     font-style: italic;
                 }
 
                 .emphasis {
-                    font-weight: 900;
+                    font-weight: 800;
                 }
 
                 .hero-divider {
-                    width: 120px;
+                    width: 100px;
                     height: 4px;
-                    background: var(--black);
-                    margin: 40px 0;
+                    background: var(--brand-orange);
+                    margin: 45px 0;
                 }
 
                 .hero-lead {
                     font-size: 1.25rem;
-                    max-width: 550px;
-                    line-height: 1.6;
+                    max-width: 580px;
+                    line-height: 1.7;
                     margin-bottom: 50px;
-                    opacity: 0.8;
+                    font-weight: 500;
+                    opacity: 0.85;
                 }
 
                 .hero-btns {
                     display: flex;
-                    gap: 20px;
+                    gap: 24px;
                 }
 
-                .btn-axiom-fill {
-                    background: var(--black);
-                    color: var(--white);
-                    padding: 22px 45px;
-                    font-weight: 900;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    letter-spacing: 0.15em;
-                    font-size: 0.85rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 15px;
-                    transition: var(--transition);
+                .btn-icon {
+                    font-size: 1.2rem;
+                    transition: transform 0.3s ease;
                 }
 
-                .btn-axiom-fill:hover {
-                    background: var(--brand-green);
-                    transform: translateY(-5px);
-                }
-
-                .btn-axiom-outline {
-                    border: 2px solid var(--black);
-                    color: var(--black);
-                    padding: 22px 45px;
-                    font-weight: 900;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    letter-spacing: 0.15em;
-                    font-size: 0.85rem;
-                    transition: var(--transition);
-                }
-
-                .btn-axiom-outline:hover {
-                    background: var(--black);
-                    color: var(--white);
+                .hero-btns a:hover .btn-icon {
+                    transform: translateX(5px);
                 }
 
                 .hero-footer-elements {
@@ -284,32 +259,35 @@ const Hero = () => {
                 .coordinate-block {
                     display: flex;
                     flex-direction: column;
+                    gap: 4px;
                 }
 
                 .coord {
-                    font-size: 0.7rem;
-                    font-weight: 800;
+                    font-size: 0.75rem;
+                    font-weight: 700;
                     letter-spacing: 0.1em;
+                    color: var(--brand-black);
                 }
 
                 .coord-label {
                     font-size: 0.6rem;
                     text-transform: uppercase;
                     letter-spacing: 0.2em;
-                    font-weight: 900;
+                    font-weight: 800;
+                    color: var(--brand-blue);
                 }
 
                 .scroll-hint {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    gap: 15px;
+                    gap: 20px;
                 }
 
                 .scroll-bar {
-                    width: 2px;
-                    height: 50px;
-                    background: rgba(0,0,0,0.1);
+                    width: 1px;
+                    height: 60px;
+                    background: rgba(26, 26, 26, 0.1);
                     position: relative;
                     overflow: hidden;
                 }
@@ -321,8 +299,8 @@ const Hero = () => {
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background: var(--black);
-                    animation: scrollAnim 2s infinite;
+                    background: var(--brand-blue);
+                    animation: scrollAnim 2.5s infinite;
                 }
 
                 @keyframes scrollAnim {
@@ -331,38 +309,42 @@ const Hero = () => {
                 }
 
                 .scroll-label {
-                    font-size: 0.65rem;
-                    font-weight: 900;
+                    font-size: 0.7rem;
+                    font-weight: 700;
                     text-transform: uppercase;
-                    letter-spacing: 0.3em;
+                    letter-spacing: 0.4em;
                     writing-mode: vertical-rl;
+                    color: var(--brand-black);
                 }
 
                 .stat-quick {
                     display: flex;
                     flex-direction: column;
                     text-align: right;
+                    gap: 4px;
                 }
 
                 .stat-val {
-                    font-size: 1.5rem;
-                    font-weight: 900;
+                    font-size: 1.75rem;
+                    font-weight: 800;
                     line-height: 1;
+                    color: var(--brand-orange);
                 }
 
                 .stat-tag {
-                    font-size: 0.6rem;
+                    font-size: 0.65rem;
                     text-transform: uppercase;
-                    font-weight: 800;
-                    letter-spacing: 0.1em;
-                    opacity: 0.6;
+                    font-weight: 700;
+                    letter-spacing: 0.15em;
+                    opacity: 0.7;
+                    color: var(--brand-black);
                 }
 
                 @media (max-width: 1024px) {
                     .hero-image-wrap {
                         width: 100%;
                         clip-path: none;
-                        opacity: 0.3;
+                        opacity: 0.25;
                     }
                     .hero-image-overlay {
                         background: linear-gradient(to bottom, var(--white) 0%, transparent 50%, var(--white) 100%);
@@ -371,7 +353,7 @@ const Hero = () => {
                         display: none;
                     }
                     .hero-main-title {
-                        font-size: 2.5rem;
+                        font-size: 2.75rem;
                     }
                     .hero-btns {
                         flex-direction: column;

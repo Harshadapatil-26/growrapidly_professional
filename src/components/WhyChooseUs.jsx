@@ -5,20 +5,20 @@ const WhyChooseUs = () => {
     <section id="why-us" className="advantage-section bg-light premium-grain">
       <div className="container">
         <div className="advantage-top reveal">
-          <span className="section-tag text-blue">Operational Excellence</span>
-          <h2 className="section-head">STRATEGIC <span className="text-orange">SUPPORT.</span></h2>
+          <span className="section-tag">Operational Excellence</span>
+          <h2 className="section-head">STRATEGIC <span className="text-emerald">SUPPORT.</span></h2>
         </div>
         <div className="advantage-grid reveal">
-          <div className="support-card shadow-premium">
-            <span className="card-icon text-green">⊚</span>
-            <h3 className="card-title text-black">REAL-TIME MONITORING</h3>
+          <div className="support-card">
+            <span className="card-icon text-emerald">⊚</span>
+            <h3 className="card-title">REAL-TIME MONITORING</h3>
             <p className="card-desc opacity-70">
-              Our war rooms remain operational 24/7, providing continuous surveillance of the digital and ground-level electoral landscapes.
+              Our digital war rooms remain operational 24/7, providing continuous surveillance of the digital and ground-level electoral landscapes.
             </p>
           </div>
-          <div className="support-card shadow-premium">
-            <span className="card-icon text-blue">⊕</span>
-            <h3 className="card-title text-black">STRATEGY OPTIMIZATION</h3>
+          <div className="support-card">
+            <span className="card-icon text-navy">⊕</span>
+            <h3 className="card-title">STRATEGY OPTIMIZATION</h3>
             <p className="card-desc opacity-70">
               We utilize high-velocity data analytics to refine campaign messaging and tactical positioning in response to shifting public sentiment.
             </p>
@@ -30,9 +30,9 @@ const WhyChooseUs = () => {
                 .advantage-section {
                     padding: var(--section-padding) 0;
                     position: relative;
-                    background-color: #fcfcfc;
+                    background-color: var(--light-gray);
                     overflow: hidden;
-                    border-top: 1px solid rgba(0,0,0,0.05);
+                    border-top: 1px solid rgba(10, 25, 47, 0.05);
                 }
 
                 .advantage-grid {
@@ -45,35 +45,42 @@ const WhyChooseUs = () => {
                 .support-card {
                     background: var(--white);
                     padding: 60px;
-                    border: 1px solid rgba(0,0,0,0.05);
+                    border: 1px solid rgba(10, 25, 47, 0.08);
                     transition: var(--transition);
+                    border-radius: var(--radius-sm);
                 }
 
                 .support-card:hover {
-                    transform: translateY(-10px);
-                    box-shadow: 0 50px 100px rgba(0,0,0,0.06);
+                    transform: translateY(-8px);
+                    box-shadow: var(--shadow-hover);
+                    border-color: var(--brand-orange);
                 }
 
                 .card-icon {
-                    font-size: 2.5rem;
+                    font-size: 3rem;
                     display: block;
                     margin-bottom: 30px;
+                    opacity: 0.9;
                 }
 
                 .card-title {
-                    font-size: 1.25rem;
+                    font-size: 1.5rem;
+                    font-weight: 700;
                     margin-bottom: 20px;
-                    letter-spacing: 0.05em;
+                    color: var(--brand-blue);
                 }
 
                 .card-desc {
-                    font-size: 1rem;
-                    line-height: 1.6;
+                    font-size: 1.05rem;
+                    line-height: 1.7;
                     max-width: 450px;
+                    color: var(--brand-black);
+                    opacity: 0.7;
                 }
 
                 @media (max-width: 1024px) {
                     .advantage-grid { grid-template-columns: 1fr; }
+                    .support-card { padding: 40px; }
                 }
             `}</style>
     </section>

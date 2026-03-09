@@ -8,12 +8,14 @@ const CTA = () => {
       <div className="container">
         <div className="contact-grid reveal">
           <div className="contact-info">
-            <span className="section-tag text-blue">The Strategic Entry</span>
-            <h2 className="display-title">INITIATE <br /><span className="text-orange">ENGAGEMENT.</span></h2>
-            <p className="contact-subtitle text-black opacity-70">
-              Direct access to our lead strategic advisors.
-              Serious inquiries only. We select our clients based on alignment and winning potential.
+            <h2 className="section-head text-blue">Ready to Command?</h2>
+            <p className="lead-text text-black opacity-70">
+              Let's architect your institutional dominance.
             </p>
+            <div className="cta-btns">
+              <a href="#contact" className="btn btn-black">SECURE THE EDGE</a>
+              <a href="#services" className="btn btn-outline-black" style={{ borderColor: 'var(--brand-orange)' }}>EXPLORE PROTOCOLS</a>
+            </div>
           </div>
 
           <div className="contact-form-wrapper shadow-premium">
@@ -49,32 +51,33 @@ const CTA = () => {
         .contact-section {
           background-color: var(--white);
           padding: 160px 0;
-          border-top: 1px solid rgba(0,0,0,0.05);
+          border-top: 1px solid rgba(10, 25, 47, 0.05);
         }
         .contact-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 120px;
-          align-items: flex-start;
+          align-items: center;
         }
         
         .contact-subtitle {
           font-size: 1.25rem;
           margin-top: 30px;
-          line-height: 1.6;
+          line-height: 1.7;
+          color: var(--brand-blue);
         }
 
         .contact-form-wrapper {
-          background: #fcfcfc;
+          background: var(--white);
           padding: 60px;
-          border: 1px solid rgba(0,0,0,0.05);
-          box-shadow: 0 40px 100px rgba(0,0,0,0.05);
+          border: 1px solid rgba(10, 25, 47, 0.08);
+          border-radius: var(--radius-sm);
         }
 
         .contact-form {
           display: flex;
           flex-direction: column;
-          gap: 20px;
+          gap: 24px;
         }
 
         .form-group input, 
@@ -82,44 +85,48 @@ const CTA = () => {
         .form-group textarea {
           width: 100%;
           padding: 20px;
-          border: 2px solid var(--black);
-          background: transparent;
-          font-family: var(--font-heading);
-          font-weight: 800;
-          font-size: 0.8rem;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
+          border: 1.5px solid rgba(10, 25, 47, 0.2);
+          background: var(--light-gray);
+          font-family: var(--font-main);
+          font-weight: 500;
+          font-size: 0.9rem;
           transition: var(--transition);
           outline: none;
+          border-radius: var(--radius-sm);
+          color: var(--brand-blue);
         }
 
         .form-group input:focus, 
         .form-group select:focus, 
         .form-group textarea:focus {
-          border-color: var(--brand-green);
+          border-color: var(--brand-orange);
+          background: var(--white);
+          box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.1);
         }
 
         .submit-btn {
-          background: var(--black);
+          background: var(--brand-blue);
           color: var(--white);
           border: none;
-          padding: 25px;
-          font-weight: 900;
+          padding: 24px;
+          font-weight: 700;
           font-family: var(--font-heading);
-          font-size: 0.9rem;
+          font-size: 0.95rem;
           text-transform: uppercase;
-          letter-spacing: 0.2em;
+          letter-spacing: 0.15em;
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
           gap: 12px;
           transition: var(--transition);
+          border-radius: var(--radius-sm);
         }
 
         .submit-btn:hover {
-          background: var(--brand-green);
-          transform: translateY(-5px);
+          background: var(--black);
+          transform: translateY(-3px);
+          box-shadow: var(--shadow-hover);
         }
 
         @media (max-width: 1024px) {

@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 import WhatsAppFloating from './components/WhatsAppFloating';
 import ServicesPage from './pages/ServicesPage';
 
-const ScrollToTop = () => {
+const ScrollToProjectTop = () => {
     const { pathname } = useLocation();
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -47,14 +47,13 @@ const HomePage = () => (
         <div id="services"><Services /></div>
         <div id="leadership"><Leadership /></div>
         <div id="why-us"><WhyChooseUs /></div>
-        <div id="contact"><CTA /></div>
     </>
 );
 
 function App() {
     return (
         <Router>
-            <ScrollToTop />
+            <ScrollToProjectTop />
             <ScrollReveal>
                 <div className="app">
                     <Navbar />

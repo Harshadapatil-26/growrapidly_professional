@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="container nav-wrapper">
         <Link to="/" className="nav-logo">
           <img src={logo} alt="Grow Rapidly" className="logo-img" />
-          <span className="logo-text text-black">GROW <span className="text-green">RAPIDLY</span></span>
+          <span className="logo-text text-black">GROWRAPIDLY</span>
         </Link>
 
         <ul className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
@@ -53,19 +53,19 @@ const Navbar = () => {
             </li>
           ))}
           <li className="mobile-only">
-            <a href="#contact" className="btn btn-green">LET'S TALK</a>
+            <a href="#contact" className="btn btn-emerald">LET'S TALK</a>
           </li>
         </ul>
 
         <div className="nav-actions">
-          <a href="#contact" className="btn btn-green desktop-only">LET'S TALK</a>
+          <a href="#contact" className="btn btn-emerald desktop-only">LET'S TALK</a>
           <button
             className={`menu-toggle ${mobileMenuOpen ? 'active' : ''}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <span className="bg-black"></span>
-            <span className="bg-black"></span>
-            <span className="bg-black"></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
       </div>
@@ -82,11 +82,15 @@ const Navbar = () => {
                     z-index: 1000;
                     background-color: transparent;
                     transition: var(--transition);
+                    border-bottom: 1px solid transparent;
                 }
 
                 .navbar.scrolled {
-                    background-color: var(--white);
-                    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                    background-color: rgba(255, 255, 255, 0.8);
+                    backdrop-filter: blur(15px);
+                    -webkit-backdrop-filter: blur(15px);
+                    box-shadow: var(--shadow-subtle);
+                    border-bottom: 1px solid var(--glass-border);
                     height: 80px;
                 }
 
@@ -105,47 +109,60 @@ const Navbar = () => {
                 }
 
                 .logo-img {
-                    height: 40px;
+                    height: 44px;
                 }
 
                 .logo-text {
                     font-family: var(--font-heading);
-                    font-weight: 900;
-                    font-size: 1.25rem;
+                    font-weight: 800;
+                    font-size: 1.15rem;
                     text-transform: uppercase;
-                    letter-spacing: 0.1em;
+                    letter-spacing: 0.15em;
                 }
 
                 .nav-menu {
                     display: flex;
                     list-style: none;
-                    gap: 40px;
+                    gap: 48px;
                     align-items: center;
                 }
 
                 .nav-link {
                     text-decoration: none;
-                    font-weight: 800;
-                    font-size: 0.8rem;
+                    font-weight: 600;
+                    font-size: 0.85rem;
                     text-transform: uppercase;
-                    letter-spacing: 0.15em;
+                    letter-spacing: 0.1em;
                     transition: var(--transition);
-                    opacity: 0.8;
+                    opacity: 0.7;
+                    position: relative;
+                }
+
+                .nav-link::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background: var(--brand-green);
+                    transition: var(--transition);
                 }
 
                 .nav-link:hover {
                     opacity: 1;
-                    color: var(--brand-green);
+                    color: var(--brand-green) !important;
+                }
+
+                .nav-link:hover::after {
+                    width: 100%;
                 }
 
                 .nav-actions {
                     display: flex;
                     align-items: center;
-                    gap: 20px;
+                    gap: 24px;
                 }
-
-                .bg-white { background-color: var(--white) !important; }
-                .bg-black { background-color: var(--black) !important; }
 
                 .desktop-only { display: flex; }
                 .mobile-only { display: none; }
@@ -164,6 +181,7 @@ const Navbar = () => {
                     display: block;
                     width: 28px;
                     height: 2px;
+                    background-color: var(--brand-black);
                     transition: var(--transition);
                 }
 
@@ -182,16 +200,15 @@ const Navbar = () => {
                     }
 
                     .nav-menu.active { right: 0; }
-                    .nav-menu.active .nav-link { color: var(--black); }
+                    .nav-menu.active .nav-link { color: var(--brand-blue); font-size: 1.5rem; margin-bottom: 20px; }
                     .menu-toggle { display: flex; }
                     .desktop-only { display: none; }
                     .mobile-only { display: block; }
-                    .nav-link { font-size: 2rem; margin-bottom: 30px; }
                 }
 
-                .menu-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); background-color: var(--black) !important; }
+                .menu-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
                 .menu-toggle.active span:nth-child(2) { opacity: 0; }
-                .menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background-color: var(--black) !important; }
+                .menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
             `}</style>
     </nav>
   );
