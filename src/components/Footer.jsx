@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
 
 const Footer = () => {
@@ -14,37 +13,36 @@ const Footer = () => {
                 <span className="text-black">GROWRAPIDLY</span>
               </div>
               <p className="f-mission opacity-70 text-black">
-                Architecting institutional dominance through precision narrative deployment,
-                high-frequency digital engagement, and data-driven sentiment analysis.
-                We deliver signal in a world of noise.
+                A results-driven digital marketing agency helping Real Estate, Hospitals, and Restaurants generate more leads, bookings, and revenue through powerful digital strategies.
               </p>
             </div>
 
             <div className="footer-links-grid">
               <div className="f-col">
-                <span className="col-tag text-emerald">Strategize</span>
-                <a href="/#about">Mindset</a>
-                <Link to="/services">Intelligence</Link>
-                <a href="/#strategy">Blueprint</a>
-                <a href="/#impact">Impact</a>
+                <span className="col-tag text-emerald">Services</span>
+                <a href="/#services">Social Media Marketing</a>
+                <a href="/#services">Lead Generation</a>
+                <a href="/#services">Local SEO</a>
+                <a href="/#services">Website Design</a>
               </div>
               <div className="f-col">
-                <span className="col-tag text-navy">Connect</span>
-                <a href="mailto:growrapidly1@gmail.com">Gmail</a>
-                <a href="https://www.instagram.com/growrapidly_/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Twitter</a>
+                <span className="col-tag text-navy">Industries</span>
+                <a href="/#services">Real Estate</a>
+                <a href="/#services">Hospitals</a>
+                <a href="/#services">Restaurants</a>
+                <a href="/#why-us">Why Choose Us</a>
               </div>
               <div className="f-col">
                 <span className="col-tag text-gold">Contact</span>
                 <a href="mailto:growrapidly1@gmail.com" className="contact-link">growrapidly1@gmail.com</a>
-                <p className="contact-text opacity-60">Available 24/7 For Strategic Support</p>
+                <a href="https://www.instagram.com/growrapidly_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <p className="contact-text opacity-60">Pune, Maharashtra, India</p>
               </div>
             </div>
           </div>
 
           <div className="footer-bottom-line">
-            <p className="copyright opacity-70 text-black">© 2026 GROWRAPIDLY STRATEGIC SYSTEMS. ALL RIGHTS RESERVED.</p>
+            <p className="copyright opacity-70 text-black">© 2026 GROWRAPIDLY DIGITAL MARKETING. ALL RIGHTS RESERVED.</p>
             <div className="footer-legal-links">
               <a href="#">Privacy Protocol</a>
               <a href="#">Terms of Engagement</a>

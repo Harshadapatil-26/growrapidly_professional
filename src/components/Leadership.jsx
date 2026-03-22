@@ -174,6 +174,8 @@ const Leadership = () => {
 
                 .leadership-visual {
                     position: relative;
+                    display: flex;
+                    justify-content: center;
                 }
 
                 .featured-leader-frame {
@@ -182,7 +184,9 @@ const Leadership = () => {
                     overflow: hidden;
                     box-shadow: var(--shadow-hover);
                     background: var(--light-gray);
-                    height: 500px;
+                    width: 380px;
+                    height: 480px;
+                    flex-shrink: 0;
                 }
 
                 .featured-leader-img {
@@ -190,7 +194,7 @@ const Leadership = () => {
                     height: 100%;
                     display: block;
                     object-fit: cover;
-                    object-position: top center;
+                    object-position: center top;
                     filter: contrast(1.05);
                     transition: var(--transition);
                 }
@@ -207,8 +211,8 @@ const Leadership = () => {
                     .leadership-split.split-reverse { grid-template-columns: 1fr; }
                     .leadership-split.split-reverse .leadership-content { order: 1; }
                     .leadership-split.split-reverse .leadership-visual { order: -1; }
-                    .leadership-visual { order: -1; max-width: 500px; margin: 0 auto; }
-                    .featured-leader-frame { max-height: 400px; }
+                    .leadership-visual { order: -1; }
+                    .featured-leader-frame { width: 320px; height: 400px; }
                     .leadership-content .display-title { font-size: 2.25rem; }
                 }
 

@@ -8,13 +8,27 @@ const CTA = () => {
       <div className="container">
         <div className="contact-grid reveal">
           <div className="contact-info">
-            <h2 className="section-head text-blue">Ready to Command?</h2>
+            <h2 className="section-head text-blue">Ready to Grow Your Business?</h2>
             <p className="lead-text text-black opacity-70">
-              Let's architect your institutional dominance.
+              Book your Free Marketing Consultation today and let's build a strategy that brings real customers to your business.
             </p>
             <div className="cta-btns">
-              <a href="#contact" className="btn btn-black">SECURE THE EDGE</a>
-              <a href="#services" className="btn btn-outline-black" style={{ borderColor: 'var(--brand-orange)' }}>EXPLORE PROTOCOLS</a>
+              <a href="tel:+919270010816" className="btn btn-black">📞 Call Us Now</a>
+              <a href="mailto:growrapidly1@gmail.com" className="btn btn-outline-black" style={{ borderColor: 'var(--brand-orange)' }}>✉ Email Us</a>
+            </div>
+            <div className="contact-details">
+              <div className="contact-item">
+                <span className="contact-label">Phone</span>
+                <a href="tel:+919270010816" className="contact-value">+91 92700 10816</a>
+              </div>
+              <div className="contact-item">
+                <span className="contact-label">Email</span>
+                <a href="mailto:growrapidly1@gmail.com" className="contact-value">growrapidly1@gmail.com</a>
+              </div>
+              <div className="contact-item">
+                <span className="contact-label">Office</span>
+                <span className="contact-value">Pune, Maharashtra, India</span>
+              </div>
             </div>
           </div>
 
@@ -28,21 +42,21 @@ const CTA = () => {
               </div>
               <div className="form-group">
                 <select required>
-                  <option value="" disabled selected>SELECT SERVICE</option>
-                  <option>CAMPAIGN STRATEGY</option>
-                  <option>SOCIAL MEDIA MANAGEMENT</option>
-                  <option>LEADERSHIP BRANDING</option>
-                  <option>CONSTITUENCY STRATEGY</option>
-                  <option>DIGITAL ADVERTISING</option>
-                  <option>CONTENT CREATION</option>
-                  <option>BUSINESS MARKETING</option>
-                  <option>24/7 STRATEGIC SUPPORT</option>
+                  <option value="" disabled defaultValue="">SELECT SERVICE</option>
+                  <option>Social Media Marketing</option>
+                  <option>Lead Generation Campaigns</option>
+                  <option>Local SEO</option>
+                  <option>Website Design</option>
+                  <option>Content & Video Marketing</option>
+                  <option>Real Estate Marketing</option>
+                  <option>Hospital Marketing</option>
+                  <option>Restaurant Marketing</option>
                 </select>
               </div>
               <div className="form-group">
                 <textarea placeholder="PROJECT MESSAGE" rows="4" required></textarea>
               </div>
-              <button type="submit" className="submit-btn uppercase">Initiate Strategy <span className="arrow">→</span></button>
+              <button type="submit" className="submit-btn uppercase">Get Free Consultation <span className="arrow">→</span></button>
             </form>
           </div>
         </div>
@@ -64,6 +78,38 @@ const CTA = () => {
           font-size: 1.25rem;
           margin-top: 30px;
           line-height: 1.7;
+          color: var(--brand-blue);
+        }
+
+        .contact-details {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .contact-item {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+
+        .contact-label {
+          font-size: 0.7rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.2em;
+          color: var(--brand-green);
+        }
+
+        .contact-value {
+          font-size: 1rem;
+          font-weight: 600;
+          color: var(--brand-black);
+          text-decoration: none;
+        }
+
+        .contact-value:hover {
           color: var(--brand-blue);
         }
 

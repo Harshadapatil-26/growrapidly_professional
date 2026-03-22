@@ -1,55 +1,54 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Services = () => {
   const services = [
     {
-      title: "Campaign Strategy",
-      icon: "⊕",
-      color: "var(--brand-blue)",
-      desc: "Precision architecting of multi-channel political and corporate campaigns for absolute victory."
-    },
-    {
-      title: "Social Media Command",
+      title: "Social Media Marketing",
       icon: "⊚",
-      color: "var(--brand-orange)",
-      desc: "Dominating the digital narrative through real-time sentiment analysis and viral engineering."
-    },
-    {
-      title: "Institutional Branding",
-      icon: "⊡",
-      color: "var(--brand-green)",
-      desc: "Constructing unshakeable reputation frameworks for leaders and high-growth organizations."
-    },
-    {
-      title: "Constituency Intelligence",
-      icon: "⊞",
       color: "var(--brand-blue)",
-      desc: "Deep-layer data mining and behavioral profiling to decode voter and market intent."
+      desc: "Content strategy, viral reels, graphic design, and audience engagement to grow your brand."
     },
     {
-      title: "Digital Dominance",
-      icon: "⊠",
+      title: "Lead Generation Campaigns",
+      icon: "⊕",
       color: "var(--brand-orange)",
-      desc: "Aggressive SEO, PPC, and algorithm manipulation to secure the primary digital real estate."
+      desc: "Facebook Ads, Instagram Ads, Google Ads, and YouTube Ads that bring quality leads."
     },
     {
-      title: "Strategic Content",
-      icon: "⊛",
-      color: "var(--brand-green)",
-      desc: "Linguistic engineering and high-authority messaging that drives belief and action."
-    },
-    {
-      title: "Business Expansion",
+      title: "Local SEO",
       icon: "⊞",
-      color: "var(--brand-orange)",
-      desc: "Identifying structural growth opportunities and architecting market entry dominance."
+      color: "var(--brand-green)",
+      desc: "Google Business Profile optimization, local keyword ranking, and review management."
     },
     {
-      title: "24/7 War Room Support",
+      title: "Website Design",
+      icon: "⊡",
+      color: "var(--brand-blue)",
+      desc: "Fast, mobile-optimized websites and high-converting landing pages for your business."
+    },
+    {
+      title: "Content & Video Marketing",
+      icon: "⊛",
+      color: "var(--brand-orange)",
+      desc: "Reels, educational videos, and storytelling content that connects with your audience."
+    },
+    {
+      title: "Real Estate Marketing",
+      icon: "⊠",
+      color: "var(--brand-green)",
+      desc: "Property lead generation, landing pages, virtual tours, and WhatsApp automation."
+    },
+    {
+      title: "Hospital Marketing",
       icon: "⊘",
       color: "var(--brand-blue)",
-      desc: "Continuous tactical monitoring and crisis management for high-stakes operations."
+      desc: "Doctor branding, patient lead generation, and online reputation management."
+    },
+    {
+      title: "Restaurant Marketing",
+      icon: "⊞",
+      color: "var(--brand-orange)",
+      desc: "Food reels, influencer marketing, and Google Maps ranking to fill your tables."
     },
   ];
 
@@ -57,8 +56,8 @@ const Services = () => {
     <section id="services" className="services bg-white premium-grain">
       <div className="container">
         <div className="services-top reveal">
-          <span className="section-tag">Battle-Tested Capabilities</span>
-          <h2 className="section-head">STRATEGIC <span className="text-orange">POWER.</span></h2>
+          <span className="section-tag">Our Core Services</span>
+          <h2 className="section-head">WHAT WE <span className="text-orange">DO.</span></h2>
         </div>
 
         <div className="capabilities-grid reveal">
@@ -73,7 +72,7 @@ const Services = () => {
                 <p className="cap-desc">{item.desc}</p>
                 <div className="cap-footer">
                   <span className="learn-more" style={{ color: item.color }}>
-                    ANALYZE PROTOCOL
+                    LEARN MORE
                     <span className="arrow">→</span>
                   </span>
                 </div>
@@ -84,11 +83,12 @@ const Services = () => {
 
         <div className="philosophy-strip reveal">
           <div className="philosophy-header">
-            <span className="section-tag">Strategy Philosophy</span>
-            <h2 className="display-title">WE DON'T <span className="text-orange">GUESS.</span> WE PLAN, PRESSURE, AND <span className="text-green">EXECUTE.</span></h2>
+            <span className="section-tag">Industry Specific Services</span>
+            <h2 className="display-title">REAL ESTATE. <span className="text-orange">HOSPITALS.</span> <span className="text-green">RESTAURANTS.</span></h2>
+            <p className="philosophy-desc">We don't do generic marketing. Every strategy is built specifically for your industry so you get results that actually matter to your business.</p>
           </div>
           <div className="philosophy-cta">
-            <Link to="/services" className="btn btn-black">INITIATE FULL PROTOCOL</Link>
+            <a href="#contact" className="btn btn-black">Get Free Consultation →</a>
           </div>
         </div>
       </div>
@@ -218,6 +218,15 @@ const Services = () => {
                     max-width: 850px;
                     line-height: 1.1;
                     color: var(--brand-black);
+                }
+
+                .philosophy-desc {
+                    margin-top: 20px;
+                    font-size: 1rem;
+                    line-height: 1.7;
+                    color: var(--brand-black);
+                    opacity: 0.6;
+                    max-width: 500px;
                 }
 
                 @media (max-width: 1280px) {

@@ -68,12 +68,17 @@ const ServicesPage = () => {
         <div className="services-page premium-grain">
             <section className="services-hero bg-white">
                 <div className="container">
-                    <div className="reveal active">
-                        <span className="section-tag">GROWRAPIDLY Capabilities</span>
-                        <h1 className="display-title">STRATEGIC <br /><span className="text-emerald">POWER.</span></h1>
-                        <p className="text-black opacity-70 max-600">
-                            We deliver a comprehensive suite of tactical services designed for institutional leaders and innovative businesses.
-                        </p>
+                    <div className="services-hero-inner reveal active">
+                        <div className="services-hero-text">
+                            <span className="section-tag">GROWRAPIDLY Capabilities</span>
+                            <h1 className="display-title">STRATEGIC <br /><span className="text-emerald">POWER.</span></h1>
+                            <p className="text-black opacity-70 max-600">
+                                We deliver a comprehensive suite of tactical services designed for institutional leaders and innovative businesses.
+                            </p>
+                        </div>
+                        <div className="services-hero-img-wrap">
+                            <img src="/images/backgrounds/hero_bg_v2.png" alt="Services" className="services-hero-img" />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -99,7 +104,6 @@ const ServicesPage = () => {
                             <div className="detail-visual">
                                 <div className="detail-img-wrap">
                                     <img src={service.img} alt={service.title} className="gritty-img" />
-                                    <div className="img-overlay-light-detail"></div>
                                 </div>
                             </div>
                         </div>
@@ -122,12 +126,33 @@ const ServicesPage = () => {
                 }
 
                 .services-hero {
-                    padding: 150px 0 100px;
+                    padding: 100px 0 80px;
                 }
 
-                .max-600 { max-width: 600px; font-size: 1.25rem; margin-top: 30px; }
+                .services-hero-inner {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 80px;
+                    align-items: center;
+                }
 
-                .service-detail {
+                .services-hero-text {
+                    max-width: 560px;
+                }
+
+                .services-hero-img-wrap {
+                    border-radius: 20px;
+                    overflow: hidden;
+                    height: 420px;
+                    box-shadow: var(--shadow-hover);
+                }
+
+                .services-hero-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }                .service-detail {
                     padding: 140px 0;
                     border-bottom: 1px solid rgba(10, 25, 47, 0.05);
                 }
@@ -201,7 +226,21 @@ const ServicesPage = () => {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    filter: brightness(0.9) contrast(1.1);
+                }
+
+                .gritty-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+
+                .max-600 { max-width: 560px; font-size: 1.1rem; margin-top: 20px; line-height: 1.7; }
+
+                @media (max-width: 1024px) {
+                    .services-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+                    .services-hero-img-wrap { height: 300px; }
+                    .services-hero-text { max-width: 100%; }
                 }
 
                 .img-overlay-light-detail {

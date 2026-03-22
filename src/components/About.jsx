@@ -6,33 +6,31 @@ const About = () => {
       <div className="container">
         <div className="about-split reveal">
           <div className="about-content">
-            <span className="section-tag">Institutional Advantage</span>
+            <span className="section-tag">About Us</span>
             <h2 className="display-title">
-              TEN YEARS OF <span className="text-gold">DOMINANCE.</span>
+              We Drive <span className="text-gold">Real Results.</span>
             </h2>
             <p className="lead-text">
-              In a world of noise, we deliver signal. Our firm isn't built on theory;
-              it's built on a decade of strategic dominance in the most complex
-              competitive landscapes in the world.
+              We are a results-driven digital marketing agency specializing in Real Estate, Healthcare, and Restaurant marketing. Our mission is to help businesses attract more customers, generate quality leads, and grow their brand online.
             </p>
 
             <ul className="strategic-highlights">
               <li>
                 <span className="check-icon">✓</span>
-                Signal-to-noise ratio optimization for global narratives.
+                We focus on strategies that bring real customers, not just likes and followers.
               </li>
               <li>
                 <span className="check-icon">✓</span>
-                Institutional-grade strategic engineering and deployment.
+                Industry-specific expertise in Real Estate, Healthcare, and Restaurants.
               </li>
               <li>
                 <span className="check-icon">✓</span>
-                Proven dominance in high-stakes competitive environments.
+                Data-driven campaigns with transparent reporting and ROI focus.
               </li>
             </ul>
 
             <div className="btn-wrap">
-              <a href="#contact" className="btn btn-black">Discuss The Blueprint</a>
+              <a href="#contact" className="btn btn-black">Get Free Consultation</a>
             </div>
           </div>
 

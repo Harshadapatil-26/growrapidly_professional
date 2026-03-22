@@ -12,6 +12,7 @@ import Impact from './components/Impact';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import WhatsAppFloating from './components/WhatsAppFloating';
+import Process from './components/Process';
 import ServicesPage from './pages/ServicesPage';
 
 const ScrollToProjectTop = () => {
@@ -44,9 +45,12 @@ const ScrollReveal = ({ children }) => {
 const HomePage = () => (
     <>
         <div id="home"><Hero /></div>
+        <div id="about"><About /></div>
         <div id="services"><Services /></div>
+        <div id="process"><Process /></div>
         <div id="leadership"><Leadership /></div>
         <div id="why-us"><WhyChooseUs /></div>
+        <div id="contact"><CTA /></div>
     </>
 );
 

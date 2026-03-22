@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -19,7 +18,7 @@ const Hero = () => {
                 <div className="hero-branding">
                     <div className="system-status">
                         <span className="dot"></span>
-                        <span className="status-text text-navy">Strategic Intelligence Unit</span>
+                        <span className="status-text text-navy">Results-Driven Digital Marketing Agency</span>
                     </div>
                 </div>
 
@@ -27,35 +26,31 @@ const Hero = () => {
                     <div className="message-block reveal active">
                         <h1 className="hero-main-title">
                             <div className="title-row">
-                                <span className="word">Precision</span>
-                                <span className="connector">in</span>
-                                <span className="text-navy emphasis">Marketing.</span>
+                                <span className="word">Grow</span>
+                                <span className="connector">Your</span>
+                                <span className="text-navy emphasis">Business</span>
                             </div>
                             <div className="title-row">
-                                <span className="word">Authority</span>
-                                <span className="connector">in</span>
-                                <span className="text-saffron emphasis">Politics.</span>
+                                <span className="connector">with</span>
+                                <span className="text-saffron emphasis">Data-Driven</span>
                             </div>
                             <div className="title-row">
-                                <span className="word">Growth</span>
-                                <span className="connector">for</span>
-                                <span className="text-emerald emphasis">Leaders.</span>
+                                <span className="text-emerald emphasis">Digital Marketing</span>
                             </div>
                         </h1>
 
                         <div className="hero-divider"></div>
 
                         <p className="hero-lead text-black">
-                            We deliver institutional-grade strategic solutions.
-                            Built on advanced data science, behavioral linguistics, and an unwavering commitment to dominance.
+                            We help Real Estate, Hospitals, and Restaurants generate more leads, bookings, and revenue through powerful digital marketing strategies.
                         </p>
 
                         <div className="hero-btns">
-                            <Link to="/services" className="btn btn-black">
-                                INITIATE STRATEGY
+                            <a href="#contact" className="btn btn-black">
+                                Get Free Consultation
                                 <span className="btn-icon">→</span>
-                            </Link>
-                            <a href="#about" className="btn btn-outline-black">THE BLUEPRINT</a>
+                            </a>
+                            <a href="#contact" className="btn btn-outline-black">Book Strategy Call</a>
                         </div>
                     </div>
                 </div>
@@ -78,19 +73,21 @@ const Hero = () => {
 
             <style>{`
                 .hero-v3 {
-                    height: 100vh;
+                    min-height: 100vh;
                     position: relative;
                     background: var(--white);
-                    overflow: hidden;
+                    overflow: visible;
                     display: flex;
                     align-items: center;
                     padding-top: var(--header-height);
+                    padding-bottom: 80px;
                 }
 
                 .hero-background {
                     position: absolute;
                     inset: 0;
                     z-index: 1;
+                    overflow: hidden;
                 }
 
                 .hero-shapes {
@@ -162,7 +159,8 @@ const Hero = () => {
                     flex-direction: column;
                     justify-content: space-between;
                     padding-top: 60px;
-                    padding-bottom: 60px;
+                    padding-bottom: 40px;
+                    gap: 40px;
                 }
 
                 .system-status {
@@ -224,21 +222,29 @@ const Hero = () => {
                     width: 100px;
                     height: 4px;
                     background: var(--brand-orange);
-                    margin: 45px 0;
+                    margin: 28px 0;
                 }
 
                 .hero-lead {
-                    font-size: 1.25rem;
+                    font-size: 1.1rem;
                     max-width: 580px;
                     line-height: 1.7;
-                    margin-bottom: 50px;
+                    margin-bottom: 36px;
                     font-weight: 500;
                     opacity: 0.85;
                 }
 
                 .hero-btns {
                     display: flex;
-                    gap: 24px;
+                    gap: 16px;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
+
+                .hero-btns .btn {
+                    padding: 1rem 2rem;
+                    font-size: 0.82rem;
+                    white-space: nowrap;
                 }
 
                 .btn-icon {
