@@ -13,8 +13,14 @@ const CTA = () => {
               Book your Free Marketing Consultation today and let's build a strategy that brings real customers to your business.
             </p>
             <div className="cta-btns">
-              <a href="tel:+919270010816" className="btn btn-black">📞 Call Us Now</a>
-              <a href="mailto:growrapidly1@gmail.com" className="btn btn-outline-black" style={{ borderColor: 'var(--brand-orange)' }}>✉ Email Us</a>
+              <a href="tel:+919270010816" className="cta-action-btn cta-btn-call">
+                <span className="cta-btn-icon">📞</span>
+                <span>Call Us Now</span>
+              </a>
+              <a href="mailto:growrapidly1@gmail.com" className="cta-action-btn cta-btn-email">
+                <span className="cta-btn-icon">✉</span>
+                <span>Email Us</span>
+              </a>
             </div>
             <div className="contact-details">
               <div className="contact-item">
@@ -64,25 +70,83 @@ const CTA = () => {
       <style>{`
         .contact-section {
           background-color: var(--white);
-          padding: 160px 0;
+          padding: 100px 0;
           border-top: 1px solid rgba(10, 25, 47, 0.05);
         }
+
         .contact-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 120px;
-          align-items: center;
+          gap: 80px;
+          align-items: start;
         }
-        
-        .contact-subtitle {
-          font-size: 1.25rem;
-          margin-top: 30px;
+
+        .contact-info h2 {
+          font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+        }
+
+        .lead-text {
+          font-size: 1rem;
           line-height: 1.7;
-          color: var(--brand-blue);
+          margin-top: 16px;
+          margin-bottom: 32px;
+        }
+
+        .cta-btns {
+          display: flex;
+          gap: 14px;
+          flex-wrap: wrap;
+          margin-bottom: 36px;
+        }
+
+        .cta-action-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 14px 24px;
+          border-radius: var(--radius-sm);
+          font-weight: 700;
+          font-size: 0.9rem;
+          text-decoration: none;
+          transition: var(--transition);
+          white-space: nowrap;
+          flex: 1;
+          justify-content: center;
+          min-width: 140px;
+        }
+
+        .cta-btn-call {
+          background: var(--brand-black);
+          color: var(--white);
+          border: 2px solid var(--brand-black);
+        }
+
+        .cta-btn-call:hover {
+          background: var(--brand-blue);
+          border-color: var(--brand-blue);
+          transform: translateY(-3px);
+          box-shadow: var(--shadow-hover);
+        }
+
+        .cta-btn-email {
+          background: transparent;
+          color: var(--brand-black);
+          border: 2px solid var(--brand-orange);
+        }
+
+        .cta-btn-email:hover {
+          background: var(--brand-orange);
+          color: var(--white);
+          transform: translateY(-3px);
+          box-shadow: var(--shadow-hover);
+        }
+
+        .cta-btn-icon {
+          font-size: 1.1rem;
+          flex-shrink: 0;
         }
 
         .contact-details {
-          margin-top: 40px;
           display: flex;
           flex-direction: column;
           gap: 16px;
@@ -115,7 +179,7 @@ const CTA = () => {
 
         .contact-form-wrapper {
           background: var(--white);
-          padding: 60px;
+          padding: 50px 40px;
           border: 1px solid rgba(10, 25, 47, 0.08);
           border-radius: var(--radius-sm);
         }
@@ -123,14 +187,14 @@ const CTA = () => {
         .contact-form {
           display: flex;
           flex-direction: column;
-          gap: 24px;
+          gap: 20px;
         }
 
         .form-group input, 
         .form-group select, 
         .form-group textarea {
           width: 100%;
-          padding: 20px;
+          padding: 16px;
           border: 1.5px solid rgba(10, 25, 47, 0.2);
           background: var(--light-gray);
           font-family: var(--font-main);
@@ -147,37 +211,51 @@ const CTA = () => {
         .form-group textarea:focus {
           border-color: var(--brand-orange);
           background: var(--white);
-          box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.1);
+          box-shadow: 0 0 0 4px rgba(239, 118, 27, 0.1);
         }
 
         .submit-btn {
           background: var(--brand-blue);
           color: var(--white);
           border: none;
-          padding: 24px;
+          padding: 18px;
           font-weight: 700;
           font-family: var(--font-heading);
           font-size: 0.95rem;
           text-transform: uppercase;
-          letter-spacing: 0.15em;
+          letter-spacing: 0.1em;
           cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 12px;
+          gap: 10px;
           transition: var(--transition);
           border-radius: var(--radius-sm);
+          width: 100%;
         }
 
         .submit-btn:hover {
-          background: var(--black);
+          background: var(--brand-black);
           transform: translateY(-3px);
           box-shadow: var(--shadow-hover);
         }
 
+        /* Tablet */
         @media (max-width: 1024px) {
-          .contact-grid { grid-template-columns: 1fr; gap: 60px; }
-          .contact-form-wrapper { padding: 40px 20px; }
+          .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+          .contact-form-wrapper { padding: 36px 28px; }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+          .contact-section { padding: 70px 0; }
+          .cta-btns { flex-direction: column; gap: 12px; }
+          .cta-action-btn { flex: unset; width: 100%; min-width: unset; padding: 16px 20px; font-size: 1rem; }
+          .contact-form-wrapper { padding: 28px 18px; }
+          .form-group input,
+          .form-group select,
+          .form-group textarea { padding: 14px; font-size: 1rem; }
+          .submit-btn { padding: 16px; font-size: 1rem; }
         }
       `}</style>
     </section>
